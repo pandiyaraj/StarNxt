@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ResourceResultTableViewCell" rowHeight="424" id="KGk-i7-Jjw" customClass="ResourceResultTableViewCell" customModule="StarNXt" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="361" height="424"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="361" height="423.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XLS-6K-zfk">
+                        <rect key="frame" x="8" y="8" width="345" height="407.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="resourcePlaceHolder" translatesAutoresizingMaskIntoConstraints="NO" id="XEf-KY-mRr">
+                                <rect key="frame" x="0.0" y="0.0" width="345" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="U2n-Ns-mUQ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Koothu-p-pattarai" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Re3-Cx-VGt">
+                                <rect key="frame" x="15" y="215" width="315" height="19"/>
+                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acting School" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9BK-dk-stj">
+                                <rect key="frame" x="15" y="244" width="315" height="14.5"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="languageSelect" translatesAutoresizingMaskIntoConstraints="NO" id="9VD-vv-ist">
+                                <rect key="frame" x="15" y="268.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="QFF-ix-zOc"/>
+                                    <constraint firstAttribute="width" constant="25" id="g3S-aO-KSZ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbt-nk-IjZ">
+                                <rect key="frame" x="50" y="267.5" width="280" height="27"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                <state key="normal" title="http://www.koothu-p-pattarai.org/">
+                                    <color key="titleColor" red="0.25098039215686274" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phoneSelect" translatesAutoresizingMaskIntoConstraints="NO" id="kXE-oI-GCw">
+                                <rect key="frame" x="15" y="303.5" width="25" height="25"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufu-VP-ywq">
+                                <rect key="frame" x="50" y="302.5" width="280" height="27"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                <state key="normal" title="044 6537 3633">
+                                    <color key="titleColor" red="0.25098039215686274" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="locationSelect" translatesAutoresizingMaskIntoConstraints="NO" id="Bap-Bn-o7g">
+                                <rect key="frame" x="15" y="338.5" width="25" height="25"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ZvW-kw-ats">
+                                <rect key="frame" x="50" y="337.5" width="280" height="27"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                <state key="normal" title="No. 16/58, 3rd Main Road, Sri Ayyappa Nagar, Virugambakkam, Chennai, Tamil Nadu 600092">
+                                    <color key="titleColor" red="0.25098039215686274" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Rbt-nk-IjZ" firstAttribute="trailing" secondItem="Re3-Cx-VGt" secondAttribute="trailing" id="0w3-am-8nO"/>
+                            <constraint firstItem="ufu-VP-ywq" firstAttribute="leading" secondItem="ZvW-kw-ats" secondAttribute="leading" id="BCj-C8-voj"/>
+                            <constraint firstItem="Bap-Bn-o7g" firstAttribute="top" secondItem="kXE-oI-GCw" secondAttribute="bottom" constant="10" id="D4x-gx-sz1"/>
+                            <constraint firstItem="Rbt-nk-IjZ" firstAttribute="centerY" secondItem="9VD-vv-ist" secondAttribute="centerY" id="Iy2-Zm-trh"/>
+                            <constraint firstItem="ufu-VP-ywq" firstAttribute="trailing" secondItem="Re3-Cx-VGt" secondAttribute="trailing" id="NRq-hk-drS"/>
+                            <constraint firstItem="ZvW-kw-ats" firstAttribute="centerY" secondItem="Bap-Bn-o7g" secondAttribute="centerY" id="O5l-74-cwh"/>
+                            <constraint firstItem="Re3-Cx-VGt" firstAttribute="leading" secondItem="XLS-6K-zfk" secondAttribute="leading" constant="15" id="S11-fs-ciG"/>
+                            <constraint firstItem="9VD-vv-ist" firstAttribute="leading" secondItem="Re3-Cx-VGt" secondAttribute="leading" id="SOk-9k-9QT"/>
+                            <constraint firstItem="XEf-KY-mRr" firstAttribute="top" secondItem="XLS-6K-zfk" secondAttribute="top" id="SSS-bg-R2F"/>
+                            <constraint firstItem="kXE-oI-GCw" firstAttribute="width" secondItem="9VD-vv-ist" secondAttribute="width" id="Wp4-hT-eeJ"/>
+                            <constraint firstItem="ZvW-kw-ats" firstAttribute="trailing" secondItem="Re3-Cx-VGt" secondAttribute="trailing" id="ca5-6C-1GZ"/>
+                            <constraint firstItem="Re3-Cx-VGt" firstAttribute="top" secondItem="XEf-KY-mRr" secondAttribute="bottom" constant="15" id="dPP-b7-Bao"/>
+                            <constraint firstItem="Rbt-nk-IjZ" firstAttribute="leading" secondItem="9VD-vv-ist" secondAttribute="trailing" constant="10" id="deu-wJ-9fv"/>
+                            <constraint firstItem="9BK-dk-stj" firstAttribute="top" secondItem="Re3-Cx-VGt" secondAttribute="bottom" constant="10" id="dfl-1J-GZI"/>
+                            <constraint firstItem="Bap-Bn-o7g" firstAttribute="height" secondItem="9VD-vv-ist" secondAttribute="height" id="eCV-0T-Ueu"/>
+                            <constraint firstItem="kXE-oI-GCw" firstAttribute="height" secondItem="9VD-vv-ist" secondAttribute="height" id="eDU-o6-ftb"/>
+                            <constraint firstItem="9BK-dk-stj" firstAttribute="leading" secondItem="Re3-Cx-VGt" secondAttribute="leading" id="fLO-P5-cui"/>
+                            <constraint firstItem="9VD-vv-ist" firstAttribute="top" secondItem="9BK-dk-stj" secondAttribute="bottom" constant="10" id="fWp-Pz-FKF"/>
+                            <constraint firstItem="Bap-Bn-o7g" firstAttribute="width" secondItem="9VD-vv-ist" secondAttribute="width" id="gs9-ph-Th6"/>
+                            <constraint firstAttribute="trailing" secondItem="XEf-KY-mRr" secondAttribute="trailing" id="hDr-Le-U0f"/>
+                            <constraint firstItem="kXE-oI-GCw" firstAttribute="top" secondItem="9VD-vv-ist" secondAttribute="bottom" constant="10" id="jWb-cE-Dhq"/>
+                            <constraint firstAttribute="trailing" secondItem="Re3-Cx-VGt" secondAttribute="trailing" constant="15" id="jhb-dz-prW"/>
+                            <constraint firstItem="ufu-VP-ywq" firstAttribute="centerY" secondItem="kXE-oI-GCw" secondAttribute="centerY" id="mN4-Cm-L5j"/>
+                            <constraint firstItem="Bap-Bn-o7g" firstAttribute="leading" secondItem="Re3-Cx-VGt" secondAttribute="leading" id="nK5-ua-MKB"/>
+                            <constraint firstItem="XEf-KY-mRr" firstAttribute="leading" secondItem="XLS-6K-zfk" secondAttribute="leading" id="pFh-AV-9ay"/>
+                            <constraint firstItem="9BK-dk-stj" firstAttribute="trailing" secondItem="Re3-Cx-VGt" secondAttribute="trailing" id="qdW-TA-bHT"/>
+                            <constraint firstItem="kXE-oI-GCw" firstAttribute="leading" secondItem="Re3-Cx-VGt" secondAttribute="leading" id="sAH-Sj-jd7"/>
+                            <constraint firstItem="Rbt-nk-IjZ" firstAttribute="leading" secondItem="ZvW-kw-ats" secondAttribute="leading" id="zel-TK-hUe"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="0.5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                <size key="value" width="2" height="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="XLS-6K-zfk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="MYU-x4-0N5"/>
+                    <constraint firstAttribute="bottom" secondItem="XLS-6K-zfk" secondAttribute="bottom" constant="8" id="Q0d-NU-8Tr"/>
+                    <constraint firstAttribute="trailing" secondItem="XLS-6K-zfk" secondAttribute="trailing" constant="8" id="syE-as-dKI"/>
+                    <constraint firstItem="XLS-6K-zfk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="zhg-pD-lut"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="browseBtn" destination="Rbt-nk-IjZ" id="SYO-lD-j8W"/>
+                <outlet property="locationBtn" destination="ZvW-kw-ats" id="5YQ-Eq-88A"/>
+                <outlet property="phoneBtn" destination="ufu-VP-ywq" id="9KU-GK-2NU"/>
+                <outlet property="resourceDescription" destination="9BK-dk-stj" id="wmW-LR-ore"/>
+                <outlet property="resourceName" destination="Re3-Cx-VGt" id="b8j-RP-bED"/>
+                <outlet property="resourceProfileImageView" destination="XEf-KY-mRr" id="R88-TL-eZZ"/>
+            </connections>
+            <point key="canvasLocation" x="14.5" y="34"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="languageSelect" width="19" height="18"/>
+        <image name="locationSelect" width="13" height="18"/>
+        <image name="phoneSelect" width="17" height="16"/>
+        <image name="resourcePlaceHolder" width="344" height="209"/>
+    </resources>
+</document>

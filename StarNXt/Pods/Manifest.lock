@@ -1,0 +1,24 @@
+PODS:
+  - GrowingTextView (0.5.6)
+  - IQKeyboardManagerSwift (6.1.1)
+  - OnlyPictures (1.1.2)
+
+DEPENDENCIES:
+  - GrowingTextView (~> 0.4)
+  - IQKeyboardManagerSwift
+  - OnlyPictures
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - GrowingTextView
+    - IQKeyboardManagerSwift
+    - OnlyPictures
+
+SPEC CHECKSUMS:
+  GrowingTextView: 8958f4fb7419de58dd622021b2d0696487e00e70
+  IQKeyboardManagerSwift: 977affaeb4d6e971975c7790a6850f31d38f1207
+  OnlyPictures: c819b67e20f45493d49f38f4de5e630b7e8cbae0
+
+PODFILE CHECKSUM: bb7ebdddf7a3e656326d656ced552b4918282db7
+
+COCOAPODS: 1.5.3

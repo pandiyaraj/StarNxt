@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ApplcationDetailTableViewCell" rowHeight="84" id="KGk-i7-Jjw" customClass="ApplcationDetailTableViewCell" customModule="StarNXt" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="330" height="84"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="330" height="83.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C34-HA-5iu">
+                        <rect key="frame" x="0.0" y="0.0" width="330" height="83.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djZ-OW-l1D">
+                                <rect key="frame" x="16" y="23.5" width="96" height="16.5"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="98401 98401" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GRa-7h-m1x">
+                                <rect key="frame" x="16" y="45" width="96" height="19"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="djZ-OW-l1D" firstAttribute="centerY" secondItem="C34-HA-5iu" secondAttribute="centerY" constant="-10" id="3ab-Li-VvO"/>
+                            <constraint firstItem="GRa-7h-m1x" firstAttribute="top" secondItem="djZ-OW-l1D" secondAttribute="bottom" constant="5" id="3fu-Um-PLp"/>
+                            <constraint firstItem="GRa-7h-m1x" firstAttribute="trailing" secondItem="djZ-OW-l1D" secondAttribute="trailing" id="BlS-FS-Pq8"/>
+                            <constraint firstItem="GRa-7h-m1x" firstAttribute="leading" secondItem="djZ-OW-l1D" secondAttribute="leading" id="SlN-EU-twI"/>
+                            <constraint firstItem="djZ-OW-l1D" firstAttribute="leading" secondItem="C34-HA-5iu" secondAttribute="leading" constant="16" id="bCW-yr-LhP"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="C34-HA-5iu" secondAttribute="trailing" id="SfS-RC-r8g"/>
+                    <constraint firstItem="C34-HA-5iu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="SvS-jh-Ihn"/>
+                    <constraint firstItem="C34-HA-5iu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="qTe-89-EuY"/>
+                    <constraint firstAttribute="bottom" secondItem="C34-HA-5iu" secondAttribute="bottom" id="tfF-fi-KRH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="161.59999999999999" y="66.566716641679164"/>
+        </tableViewCell>
+    </objects>
+</document>

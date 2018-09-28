@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoItemView" customModule="StarNXt" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="xPc-iP-eWg"/>
+                <outlet property="titleLbl" destination="dGU-k2-IlK" id="LGD-gR-lL5"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RUA-U0-dlv">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noitemimage" translatesAutoresizingMaskIntoConstraints="NO" id="Z8f-lF-3yY">
+                            <rect key="frame" x="147.5" y="203.5" width="80" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="MUp-Zh-T7v"/>
+                                <constraint firstAttribute="height" constant="80" id="z9L-fw-ke9"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No applications recieved yet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGU-k2-IlK">
+                            <rect key="frame" x="54" y="318.5" width="267" height="25"/>
+                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="21"/>
+                            <color key="textColor" red="0.64313725490196072" green="0.71372549019607845" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.94901960784313721" green="0.95686274509803915" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="dGU-k2-IlK" firstAttribute="centerX" secondItem="RUA-U0-dlv" secondAttribute="centerX" id="MSq-0E-ZNS"/>
+                        <constraint firstItem="Z8f-lF-3yY" firstAttribute="centerX" secondItem="RUA-U0-dlv" secondAttribute="centerX" id="Zsb-hG-bva"/>
+                        <constraint firstItem="dGU-k2-IlK" firstAttribute="top" secondItem="Z8f-lF-3yY" secondAttribute="bottom" constant="35" id="j5n-hZ-cwH"/>
+                        <constraint firstItem="Z8f-lF-3yY" firstAttribute="centerY" secondItem="RUA-U0-dlv" secondAttribute="centerY" constant="-80" id="leE-dD-OQs"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="RUA-U0-dlv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7Pz-Y5-84w"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="RUA-U0-dlv" secondAttribute="trailing" id="gC2-bg-cOR"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="RUA-U0-dlv" secondAttribute="bottom" id="rcw-pd-mM4"/>
+                <constraint firstItem="RUA-U0-dlv" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="w77-ki-ecq"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="138.40000000000001" y="151.57421289355324"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="noitemimage" width="80" height="79"/>
+    </resources>
+</document>

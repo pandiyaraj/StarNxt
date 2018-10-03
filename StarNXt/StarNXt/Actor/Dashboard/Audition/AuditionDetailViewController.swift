@@ -13,7 +13,12 @@ class AuditionDetailViewController: UIViewController {
 
     @IBOutlet weak var listTableView : UITableView!
     @IBOutlet weak var applyBtn : UIButton!
+    @IBOutlet weak var moreBtn : UIButton!
     @IBOutlet weak var tableviewBottomConstraint : NSLayoutConstraint!
+    @IBOutlet weak var tableviewTopConstraint : NSLayoutConstraint!
+    
+    @IBOutlet weak var closeAuditionGroupView : UIView!
+    
     var isFromPersonalised : Bool = false
     
     var userRole : String = ""
@@ -29,8 +34,11 @@ class AuditionDetailViewController: UIViewController {
         self.loadDict()
         self.updateUI()
         listTableView.register(UINib.loadNib(nibName: CellIdentifier.audtionDetailTableviewcell), forCellReuseIdentifier: CellIdentifier.audtionDetailTableviewcell)
-
+        listTableView.tableFooterView = UIView()
         // Do any additional setup after loading the view.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = true
     }
     
     func loadDict() -> Void{
@@ -51,28 +59,78 @@ class AuditionDetailViewController: UIViewController {
     }
     
     func updateUI() -> Void {
-        if auditionType == AuditionType.Open{
+        self.closeAuditionGroupView.isHidden = true
+        if userRole == UserRole.Director{
             applyBtn.isHidden = true
+            moreBtn.isHidden = false
             tableviewBottomConstraint.constant = 0
-        }else {
-            tableviewBottomConstraint.constant = 84
-            applyBtn.isHidden = false
-            if audtionStatus == Audition_Status.Active{
-                applyBtn.setTitle("Apply", for: .normal)
-                applyBtn.backgroundColor = UIColor.init(hex: 0xFF1462)
-            }else if audtionStatus == Audition_Status.Applied{
-                applyBtn.setTitle("Applied", for: .normal)
-                applyBtn.backgroundColor = UIColor.init(hex: 0x808080)
-            }else if audtionStatus == Audition_Status.Closed{
-                applyBtn.setTitle("Closed", for: .normal)
-                applyBtn.backgroundColor = UIColor.init(hex: 0x808080)
+            tableviewTopConstraint.constant = 50
+        }else{
+            moreBtn.isHidden = true
+            tableviewTopConstraint.constant = 0
+            if auditionType == AuditionType.Open{
+                applyBtn.isHidden = true
+                tableviewBottomConstraint.constant = 0
+            }else {
+                tableviewBottomConstraint.constant = 84
+                applyBtn.isHidden = false
+                if audtionStatus == Audition_Status.Active{
+                    applyBtn.setTitle("Apply", for: .normal)
+                    applyBtn.backgroundColor = UIColor.init(hex: 0xFF1462)
+                }else if audtionStatus == Audition_Status.Applied{
+                    applyBtn.setTitle("Applied", for: .normal)
+                    applyBtn.backgroundColor = UIColor.init(hex: 0x808080)
+                }else if audtionStatus == Audition_Status.Closed{
+                    applyBtn.setTitle("Closed", for: .normal)
+                    applyBtn.backgroundColor = UIColor.init(hex: 0x808080)
+                }
             }
         }
-       
     }
     
-  
+    @IBAction func moreBtnAction() -> Void{
+        let actionSheet = UIAlertController.init(title: "", message: "Edit audition", preferredStyle: .actionSheet)
+        
+        let editAction = UIAlertAction.init(title: "Edit", style: .default) { (action) in
+            self.onEdit()
+        
+        }
+        
+        let deleteAction = UIAlertAction.init(title: "Close", style: .destructive) { (action) in
+            self.closeAuditionGroupView.isHidden = false
+        }
+        
+        let cancelAction = UIAlertAction.init(title: "Cancel", style: .cancel) { (action) in
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+        actionSheet.addAction(editAction)
+        actionSheet.addAction(deleteAction)
+        actionSheet.addAction(cancelAction)
+        if DeviceType.IS_IPAD {
+            
+        }else{
+            self.present(actionSheet, animated: true, completion: nil)
+        }
+    }
     
+    func onEdit() -> Void{
+        if auditionType == AuditionType.Personalised {
+        let personalisedVc = self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.personalisedAuditionvc) as! PersonalisedViewController
+        self.navigationController?.pushViewController(personalisedVc, animated: true)
+        }else{
+            let openauditionVc = self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.openAuditionVc) as! OpenAuditionViewController
+            self.navigationController?.pushViewController(openauditionVc, animated: true)
+        }
+    }
+  
+    @IBAction func onCancelAction() -> Void{
+        self.closeAuditionGroupView.isHidden = true
+    }
+    
+    @IBAction func onCloseAction() -> Void{
+        self.closeAuditionGroupView.isHidden = true
+    }
     
     
     /*

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Black.ttf">
+            <string>Montserrat-Black</string>
+        </array>
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LaunchView" customModule="StarNXt" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Uh-j2-c0e">
+                    <rect key="frame" x="67.5" y="110" width="240" height="183"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="DIy-Aj-9YK"/>
+                        <constraint firstAttribute="height" constant="183" id="HE7-f6-Kfm"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUBMIT YOUR PROFILE" lineBreakMode="middleTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PX7-KC-hb3">
+                    <rect key="frame" x="16" y="363" width="270" height="154"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="270" id="T96-f0-MgQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Montserrat-Black" family="Montserrat" pointSize="42"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OtW-GX-1bw">
+                    <rect key="frame" x="16" y="547" width="319" height="17.5"/>
+                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="OtW-GX-1bw" secondAttribute="trailing" constant="40" id="3XG-1U-ikj"/>
+                <constraint firstItem="OtW-GX-1bw" firstAttribute="top" secondItem="PX7-KC-hb3" secondAttribute="bottom" constant="30" id="8fy-PE-fHP"/>
+                <constraint firstItem="7Uh-j2-c0e" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="90" id="AJw-TT-5Z7"/>
+                <constraint firstItem="PX7-KC-hb3" firstAttribute="top" secondItem="7Uh-j2-c0e" secondAttribute="bottom" constant="70" id="FAC-hJ-btw"/>
+                <constraint firstItem="PX7-KC-hb3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Gri-Y7-CNG"/>
+                <constraint firstItem="OtW-GX-1bw" firstAttribute="leading" secondItem="PX7-KC-hb3" secondAttribute="leading" id="yEZ-mW-6Zb"/>
+                <constraint firstItem="7Uh-j2-c0e" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="zUb-Lc-DZP"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="profileimageView" destination="7Uh-j2-c0e" id="ZlB-3l-nyk"/>
+                <outlet property="subTitleLbl" destination="OtW-GX-1bw" id="mRh-sI-IMH"/>
+                <outlet property="titleLbl" destination="PX7-KC-hb3" id="xZF-c2-hOE"/>
+            </connections>
+            <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>
+        </view>
+    </objects>
+</document>

@@ -27,10 +27,16 @@ class ProfileSelectionViewController: UIViewController {
     
     @IBAction func  onDirectorRoleAction() -> Void{
         UserDefaults.standard.set(Constants.kDIRECTOR, forKey: Defaults.userRole)
+        let tutorialVc = self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.tutorialvc) as! TutorialViewController
+        tutorialVc.userRole = UserRole.Director
+        self.navigationController?.pushViewController(tutorialVc, animated: true)
     }
     
     @IBAction func onActorRoleAction() -> Void{
         UserDefaults.standard.set(Constants.kACTOR, forKey: Defaults.userRole)
+        let tutorialVc = self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.tutorialvc) as! TutorialViewController
+        tutorialVc.userRole = UserRole.Actor
+        self.navigationController?.pushViewController(tutorialVc, animated: true)
     }
 
     /*

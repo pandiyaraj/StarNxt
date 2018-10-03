@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Olf-fs-kN5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="io1-Ba-HKF">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -48,7 +48,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxu-YF-AmR">
-                                <rect key="frame" x="133.5" y="60" width="108.5" height="22"/>
+                                <rect key="frame" x="140" y="104" width="95.5" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="gyX-CF-xEv"/>
                                 </constraints>
@@ -57,7 +57,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Casting calls wherever you are" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0b-NS-zee">
-                                <rect key="frame" x="84" y="192" width="207" height="22"/>
+                                <rect key="frame" x="92" y="236" width="191.5" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="VTT-VA-nIk"/>
                                 </constraints>
@@ -66,7 +66,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="peopleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="2sf-aK-70q">
-                                <rect key="frame" x="64.5" y="244" width="246" height="200"/>
+                                <rect key="frame" x="64.5" y="288" width="246" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="Mib-73-b44"/>
                                     <constraint firstAttribute="width" constant="246" id="rn2-GD-E1u"/>
@@ -101,13 +101,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap “Agree and continue” to accept the StarNXT Terms of Service and Privacy Policy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JgT-WL-8Cs">
-                                <rect key="frame" x="30" y="546" width="315" height="32"/>
+                                <rect key="frame" x="30" y="547.5" width="315" height="30.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Ies-qO-GYi">
-                                <rect key="frame" x="127.5" y="92" width="120" height="90"/>
+                                <rect key="frame" x="127.5" y="136" width="120" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="bhm-zU-LiF"/>
                                     <constraint firstAttribute="width" constant="120" id="jiz-fU-aJi"/>
@@ -3002,8 +3002,19 @@ Erase your all the audition history</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPF-WZ-zXd">
+                                <rect key="frame" x="315" y="20" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="nZi-hu-uW9"/>
+                                    <constraint firstAttribute="width" constant="50" id="rWM-MG-Jzu"/>
+                                </constraints>
+                                <state key="normal" image="moreActin"/>
+                                <connections>
+                                    <action selector="moreBtnAction" destination="Eg3-ZU-47e" eventType="touchUpInside" id="APp-97-OU0"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IKQ-Li-fN6">
-                                <rect key="frame" x="0.0" y="20" width="375" height="563"/>
+                                <rect key="frame" x="0.0" y="70" width="375" height="513"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Eg3-ZU-47e" id="Kn7-eb-Jh2"/>
@@ -3021,24 +3032,98 @@ Erase your all the audition history</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZ3-gT-D4j" userLabel="DeleteGroupView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fxb-FI-Pnc">
+                                        <rect key="frame" x="16" y="198.5" width="343" height="250"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Close Audition?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dls-18-8Wy">
+                                                <rect key="frame" x="16" y="20" width="137" height="22"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="18"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you sure you want to close this audition? This audition will be closed and no longer received application from the actors. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKa-2r-LUp">
+                                                <rect key="frame" x="16" y="62" width="311" height="75"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwO-wK-EdQ">
+                                                <rect key="frame" x="122" y="196" width="90" height="34"/>
+                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
+                                                <state key="normal" title="CANCEL">
+                                                    <color key="titleColor" red="1" green="0.070588235289999995" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onCancelAction" destination="Eg3-ZU-47e" eventType="touchUpInside" id="uXf-89-A4p"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZf-Fb-bks">
+                                                <rect key="frame" x="237" y="196" width="90" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="90" id="o2t-KW-fBW"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
+                                                <state key="normal" title="CLOSE">
+                                                    <color key="titleColor" red="1" green="0.070588235289999995" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onCloseAction" destination="Eg3-ZU-47e" eventType="touchUpInside" id="iNx-vV-JrV"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="1JP-md-JU2"/>
+                                            <constraint firstAttribute="trailing" secondItem="iKa-2r-LUp" secondAttribute="trailing" constant="16" id="1iF-Ma-qef"/>
+                                            <constraint firstItem="yZf-Fb-bks" firstAttribute="width" secondItem="xwO-wK-EdQ" secondAttribute="width" id="GOi-PW-cvj"/>
+                                            <constraint firstItem="xwO-wK-EdQ" firstAttribute="bottom" secondItem="yZf-Fb-bks" secondAttribute="bottom" id="Jb7-TP-PvC"/>
+                                            <constraint firstAttribute="trailing" secondItem="yZf-Fb-bks" secondAttribute="trailing" constant="16" id="Ti4-vo-oKj"/>
+                                            <constraint firstAttribute="bottom" secondItem="yZf-Fb-bks" secondAttribute="bottom" constant="20" id="Umc-xt-NQp"/>
+                                            <constraint firstItem="iKa-2r-LUp" firstAttribute="leading" secondItem="Dls-18-8Wy" secondAttribute="leading" id="iO2-z7-24t"/>
+                                            <constraint firstItem="yZf-Fb-bks" firstAttribute="leading" secondItem="xwO-wK-EdQ" secondAttribute="trailing" constant="25" id="kY6-JM-K5s"/>
+                                            <constraint firstItem="iKa-2r-LUp" firstAttribute="top" secondItem="Dls-18-8Wy" secondAttribute="bottom" constant="20" id="kew-KP-DOS"/>
+                                            <constraint firstItem="Dls-18-8Wy" firstAttribute="top" secondItem="Fxb-FI-Pnc" secondAttribute="top" constant="20" id="kmp-6a-NJ3"/>
+                                            <constraint firstItem="Dls-18-8Wy" firstAttribute="leading" secondItem="Fxb-FI-Pnc" secondAttribute="leading" constant="16" id="llM-ah-duW"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.28000000000000003" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Fxb-FI-Pnc" firstAttribute="leading" secondItem="hZ3-gT-D4j" secondAttribute="leading" constant="16" id="A2e-qz-EfD"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fxb-FI-Pnc" secondAttribute="trailing" constant="16" id="aQM-zc-dyN"/>
+                                    <constraint firstItem="Fxb-FI-Pnc" firstAttribute="centerY" secondItem="hZ3-gT-D4j" secondAttribute="centerY" id="kHV-Eh-lVQ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="IKQ-Li-fN6" secondAttribute="bottom" constant="84" id="3Rt-cO-Z5B"/>
                             <constraint firstItem="zcU-tn-BTd" firstAttribute="leading" secondItem="ypB-4e-gvC" secondAttribute="leading" constant="20" id="88I-gD-kUm"/>
-                            <constraint firstItem="IKQ-Li-fN6" firstAttribute="top" secondItem="ypB-4e-gvC" secondAttribute="top" id="FPK-3T-zVb"/>
+                            <constraint firstItem="IKQ-Li-fN6" firstAttribute="top" secondItem="ypB-4e-gvC" secondAttribute="top" constant="50" id="FPK-3T-zVb"/>
                             <constraint firstItem="ypB-4e-gvC" firstAttribute="trailing" secondItem="zcU-tn-BTd" secondAttribute="trailing" constant="20" id="I5z-c0-JIn"/>
+                            <constraint firstItem="hZ3-gT-D4j" firstAttribute="top" secondItem="ypB-4e-gvC" secondAttribute="top" id="Jyc-m7-GXF"/>
+                            <constraint firstItem="OPF-WZ-zXd" firstAttribute="top" secondItem="ypB-4e-gvC" secondAttribute="top" id="PNG-ZL-lYl"/>
+                            <constraint firstItem="hZ3-gT-D4j" firstAttribute="trailing" secondItem="ypB-4e-gvC" secondAttribute="trailing" id="Uva-dx-L2r"/>
                             <constraint firstItem="IKQ-Li-fN6" firstAttribute="leading" secondItem="ypB-4e-gvC" secondAttribute="leading" id="cdn-ET-2lH"/>
+                            <constraint firstItem="ypB-4e-gvC" firstAttribute="bottom" secondItem="hZ3-gT-D4j" secondAttribute="bottom" id="dGG-wl-v3e"/>
                             <constraint firstItem="ypB-4e-gvC" firstAttribute="bottom" secondItem="zcU-tn-BTd" secondAttribute="bottom" constant="20" id="gG0-9E-obx"/>
                             <constraint firstItem="ypB-4e-gvC" firstAttribute="trailing" secondItem="IKQ-Li-fN6" secondAttribute="trailing" id="nmo-bQ-Hss"/>
+                            <constraint firstItem="hZ3-gT-D4j" firstAttribute="leading" secondItem="ypB-4e-gvC" secondAttribute="leading" id="u6j-wn-rDy"/>
                             <constraint firstItem="zcU-tn-BTd" firstAttribute="centerX" secondItem="rlY-yi-7fS" secondAttribute="centerX" id="xtn-qV-GB8"/>
+                            <constraint firstItem="ypB-4e-gvC" firstAttribute="trailing" secondItem="OPF-WZ-zXd" secondAttribute="trailing" constant="10" id="z3c-24-ag7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ypB-4e-gvC"/>
                     </view>
                     <connections>
                         <outlet property="applyBtn" destination="zcU-tn-BTd" id="Yxd-sT-EHY"/>
+                        <outlet property="closeAuditionGroupView" destination="hZ3-gT-D4j" id="6jm-hW-l4e"/>
                         <outlet property="listTableView" destination="IKQ-Li-fN6" id="yH1-tR-aJm"/>
+                        <outlet property="moreBtn" destination="OPF-WZ-zXd" id="bbc-oZ-rsI"/>
                         <outlet property="tableviewBottomConstraint" destination="3Rt-cO-Z5B" id="17B-qA-0fl"/>
+                        <outlet property="tableviewTopConstraint" destination="FPK-3T-zVb" id="mBj-OW-Wh9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kxP-cd-jsX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3068,14 +3153,14 @@ Erase your all the audition history</string>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="directorSelection" translatesAutoresizingMaskIntoConstraints="NO" id="1TE-7t-WxZ">
-                                <rect key="frame" x="162.5" y="100" width="50" height="50"/>
+                                <rect key="frame" x="162.5" y="144" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="9EF-ee-CBU"/>
                                     <constraint firstAttribute="width" constant="50" id="w68-1z-cvy"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DIRECTOR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dj3-E9-SWa">
-                                <rect key="frame" x="91.5" y="170" width="192" height="40"/>
+                                <rect key="frame" x="97.5" y="214" width="180" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="mUH-hi-GK9"/>
                                 </constraints>
@@ -3084,7 +3169,7 @@ Erase your all the audition history</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post Audition. Search Right Talents." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRj-7J-JD9">
-                                <rect key="frame" x="65" y="215" width="245" height="25"/>
+                                <rect key="frame" x="75.5" y="259" width="224.5" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="uwt-38-gsu"/>
                                 </constraints>
@@ -3093,7 +3178,7 @@ Erase your all the audition history</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACTOR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oca-mz-TT8">
-                                <rect key="frame" x="122.5" y="419" width="130" height="40"/>
+                                <rect key="frame" x="126.5" y="419" width="122.5" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="omD-be-i9u"/>
                                 </constraints>
@@ -3102,7 +3187,7 @@ Erase your all the audition history</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Profile. Apply Audition." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBe-kQ-hJW">
-                                <rect key="frame" x="84.5" y="464" width="206.5" height="25"/>
+                                <rect key="frame" x="93.5" y="464" width="188" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="yr0-2o-F2v"/>
                                 </constraints>
@@ -3111,7 +3196,7 @@ Erase your all the audition history</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQC-yY-Fqe">
-                                <rect key="frame" x="25" y="260" width="325" height="44"/>
+                                <rect key="frame" x="25" y="304" width="325" height="44"/>
                                 <color key="backgroundColor" red="1" green="0.078431372550000003" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="P3z-uj-w0t"/>
@@ -3121,7 +3206,7 @@ Erase your all the audition history</string>
                                     <color key="titleColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="rV7-up-Q2F" kind="push" id="43l-5G-X2B"/>
+                                    <action selector="onDirectorRoleAction" destination="9Sm-eD-v0e" eventType="touchUpInside" id="UZb-GC-RBf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D3e-dd-6g2">
@@ -3135,7 +3220,7 @@ Erase your all the audition history</string>
                                     <color key="titleColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="rV7-up-Q2F" kind="push" id="0Ii-Pj-RlY"/>
+                                    <action selector="onActorRoleAction" destination="9Sm-eD-v0e" eventType="touchUpInside" id="ACp-hc-0Q4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -3191,11 +3276,17 @@ Erase your all the audition history</string>
         <!--Tutorial View Controller-->
         <scene sceneID="QUa-Xc-Rpy">
             <objects>
-                <viewController id="rV7-up-Q2F" customClass="TutorialViewController" customModule="StarNXt" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="tutorialvc" id="rV7-up-Q2F" customClass="TutorialViewController" customModule="StarNXt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HTa-TS-jeu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5YK-30-cFl">
+                                <rect key="frame" x="0.0" y="20" width="375" height="596"/>
+                                <connections>
+                                    <outlet property="delegate" destination="rV7-up-Q2F" id="Cd7-C2-Ruv"/>
+                                </connections>
+                            </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EGW-GR-bjM">
                                 <rect key="frame" x="0.0" y="616" width="375" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3227,9 +3318,12 @@ Erase your all the audition history</string>
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextBtnAction" destination="rV7-up-Q2F" eventType="touchUpInside" id="X6W-Mw-Gti"/>
+                                </connections>
                             </button>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="82k-h0-RD3">
-                                <rect key="frame" x="162.5" y="623" width="50" height="37"/>
+                                <rect key="frame" x="162.5" y="623.5" width="50" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="Xx9-XN-PQc"/>
                                 </constraints>
@@ -3237,19 +3331,27 @@ Erase your all the audition history</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="5YK-30-cFl" firstAttribute="leading" secondItem="pBS-uC-zwS" secondAttribute="leading" id="4hm-32-GCo"/>
+                            <constraint firstItem="pBS-uC-zwS" firstAttribute="trailing" secondItem="5YK-30-cFl" secondAttribute="trailing" id="5EU-J1-cfw"/>
                             <constraint firstItem="EGW-GR-bjM" firstAttribute="leading" secondItem="pBS-uC-zwS" secondAttribute="leading" id="AfF-bn-iPv"/>
                             <constraint firstItem="pBS-uC-zwS" firstAttribute="bottom" secondItem="EGW-GR-bjM" secondAttribute="bottom" constant="50" id="Da3-US-fAz"/>
                             <constraint firstItem="pBS-uC-zwS" firstAttribute="trailing" secondItem="EGW-GR-bjM" secondAttribute="trailing" id="Jec-zV-9aa"/>
+                            <constraint firstItem="5YK-30-cFl" firstAttribute="top" secondItem="pBS-uC-zwS" secondAttribute="top" id="OJo-1j-usq"/>
+                            <constraint firstItem="82k-h0-RD3" firstAttribute="centerY" secondItem="O5W-z9-2mR" secondAttribute="centerY" id="Trc-xT-7Qh"/>
                             <constraint firstItem="82k-h0-RD3" firstAttribute="centerX" secondItem="HTa-TS-jeu" secondAttribute="centerX" id="VBw-w3-Rz4"/>
                             <constraint firstItem="pBS-uC-zwS" firstAttribute="bottom" secondItem="abO-ZZ-8oD" secondAttribute="bottom" constant="10" id="YUP-by-zE7"/>
                             <constraint firstItem="pBS-uC-zwS" firstAttribute="trailing" secondItem="O5W-z9-2mR" secondAttribute="trailing" constant="20" id="ZT7-Pl-Ot6"/>
-                            <constraint firstAttribute="bottom" secondItem="82k-h0-RD3" secondAttribute="bottom" constant="7" id="Zlp-1c-8Rt"/>
                             <constraint firstItem="abO-ZZ-8oD" firstAttribute="leading" secondItem="pBS-uC-zwS" secondAttribute="leading" constant="20" id="a7t-Lr-fnf"/>
                             <constraint firstItem="pBS-uC-zwS" firstAttribute="bottom" secondItem="O5W-z9-2mR" secondAttribute="bottom" constant="10" id="s0N-jI-gOe"/>
+                            <constraint firstItem="EGW-GR-bjM" firstAttribute="top" secondItem="5YK-30-cFl" secondAttribute="bottom" id="tDR-Ok-VYC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pBS-uC-zwS"/>
                     </view>
                     <navigationItem key="navigationItem" id="buv-Hk-e3c"/>
+                    <connections>
+                        <outlet property="scrollView" destination="5YK-30-cFl" id="S2B-L0-qyj"/>
+                        <outlet property="sliderPageControl" destination="82k-h0-RD3" id="k1e-bg-gkF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hpF-SQ-yKV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3265,6 +3367,9 @@ Erase your all the audition history</string>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="K6W-sC-rrl"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IYK-hh-zO5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -5963,6 +6068,50 @@ Erase your all the audition history</string>
             </objects>
             <point key="canvasLocation" x="1437.5999999999999" y="5734.1829085457275"/>
         </scene>
+        <!--Audition Group Detail View Controller-->
+        <scene sceneID="wmJ-mA-Ck9">
+            <objects>
+                <viewController storyboardIdentifier="auditiongroupdetailvc" id="ltH-Iz-sty" customClass="AuditionGroupDetailViewController" customModule="StarNXt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LBh-8A-PrX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JQt-pD-M61" customClass="NoItemView" customModule="StarNXt" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YUh-nh-2ir">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ltH-Iz-sty" id="a5e-AD-Fi2"/>
+                                    <outlet property="delegate" destination="ltH-Iz-sty" id="2BB-Sm-8au"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nYI-7T-RWJ" firstAttribute="trailing" secondItem="JQt-pD-M61" secondAttribute="trailing" id="1dD-wA-dKr"/>
+                            <constraint firstItem="nYI-7T-RWJ" firstAttribute="bottom" secondItem="JQt-pD-M61" secondAttribute="bottom" id="5vX-S6-Y64"/>
+                            <constraint firstItem="YUh-nh-2ir" firstAttribute="top" secondItem="nYI-7T-RWJ" secondAttribute="top" id="7lA-83-REC"/>
+                            <constraint firstItem="YUh-nh-2ir" firstAttribute="leading" secondItem="nYI-7T-RWJ" secondAttribute="leading" id="Cws-Ok-2Ca"/>
+                            <constraint firstItem="JQt-pD-M61" firstAttribute="leading" secondItem="nYI-7T-RWJ" secondAttribute="leading" id="EKT-KH-xWO"/>
+                            <constraint firstItem="nYI-7T-RWJ" firstAttribute="bottom" secondItem="YUh-nh-2ir" secondAttribute="bottom" id="SqM-fD-UY4"/>
+                            <constraint firstItem="JQt-pD-M61" firstAttribute="top" secondItem="nYI-7T-RWJ" secondAttribute="top" id="qle-IY-l3J"/>
+                            <constraint firstItem="nYI-7T-RWJ" firstAttribute="trailing" secondItem="YUh-nh-2ir" secondAttribute="trailing" id="wr7-kM-UxQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nYI-7T-RWJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="auditionListTableView" destination="YUh-nh-2ir" id="ibC-cY-Bjc"/>
+                        <outlet property="noItemView" destination="JQt-pD-M61" id="L33-za-Mwm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="50A-RT-b0F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2437" y="5756"/>
+        </scene>
         <!--Applications-->
         <scene sceneID="cmp-D8-foO">
             <objects>
@@ -6461,13 +6610,11 @@ Erase your all the audition history</string>
         <image name="downarrow" width="10" height="5"/>
         <image name="dummyprofile" width="344" height="222"/>
         <image name="getstart" width="260" height="180"/>
+        <image name="moreActin" width="4" height="16"/>
         <image name="noImage" width="88" height="87"/>
         <image name="peopleLogo" width="246" height="200"/>
         <image name="radioSelect" width="20" height="20"/>
         <image name="radioUnselect" width="20" height="20"/>
         <image name="subscriptionbg" width="239" height="204"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="0Ii-Pj-RlY"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -32,6 +32,10 @@ class DirectorAuditionListViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
     func initialiseUI() -> Void{
         self.noItemView.isHidden = true
         self.createGroupview.isHidden = true
@@ -114,6 +118,23 @@ extension DirectorAuditionListViewController : UITableViewDataSource, UITableVie
         return 235
         }else{
             return 160
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if isAudition {
+            let detailVc = self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.auditiondetailvc) as! AuditionDetailViewController
+            detailVc.userRole = UserRole.Director
+            if indexPath.row % 2 == 0 {
+            detailVc.auditionType = AuditionType.Open
+            
+            }else{
+                detailVc.auditionType = AuditionType.Personalised
+            }
+            self.navigationController?.pushViewController(detailVc, animated: true)
+        }else{
+            let detailVc = self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.directorAuditionGroupVc) as! AuditionGroupDetailViewController
+            self.navigationController?.pushViewController(detailVc, animated: true)
         }
     }
     

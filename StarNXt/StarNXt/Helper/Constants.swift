@@ -52,8 +52,8 @@ struct NotificationConstants{
 }
 
 struct Constants {
-    static let kDIRECTOR = "director"
-    static let kACTOR = "actor"
+    static let kDIRECTOR = UserRole.Director
+    static let kACTOR = UserRole.Actor
 }
 
 enum SubscriptionPlan : Int {
@@ -148,6 +148,7 @@ struct StoryBoard {
 
 struct StoryboardIdentifier {
     static let signupvc = "signupvc"
+    static let tutorialvc = "tutorialvc"
     
     static let getstartedvc = "getstartedvc"
     static let subscriptionvc = "subscriptionvc"
@@ -174,6 +175,7 @@ struct StoryboardIdentifier {
     static let personalisedAuditionvc = "personalisedaudtionvc"
     static let openAuditionVc = "openauditionvc"
     static let directorAuditionListVc = "directorauditionlistvc"
+    static let directorAuditionGroupVc = "auditiongroupdetailvc"
     static let directorApplicationVc = "directorapplicationvc"
     static let directorShortListVc = "directorshortlistvc"
     
@@ -195,6 +197,11 @@ struct Audition_Status
 struct AuditionType {
     static let Personalised = "personalised"
     static let Open = "open"
+}
+
+struct UserRole {
+    static let Director = "director"
+    static let Actor = "actor"
 }
 
 struct CellIdentifier {

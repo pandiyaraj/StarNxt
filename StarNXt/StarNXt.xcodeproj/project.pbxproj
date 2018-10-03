@@ -38,6 +38,9 @@
 		04481C8F2140578C004AB940 /* SubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04481C8E2140578C004AB940 /* SubscriptionViewController.swift */; };
 		04481C9121406D23004AB940 /* ChangeNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04481C9021406D23004AB940 /* ChangeNumberViewController.swift */; };
 		04481C9321407212004AB940 /* AccountMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04481C9221407212004AB940 /* AccountMenuViewController.swift */; };
+		0459DD9B215F551400768F92 /* AuditionGroupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459DD9A215F551400768F92 /* AuditionGroupDetailViewController.swift */; };
+		0459DDAB2164B3FF00768F92 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459DDAA2164B3FE00768F92 /* LaunchView.swift */; };
+		0459DDAD2164B41000768F92 /* LaunchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0459DDAC2164B41000768F92 /* LaunchView.xib */; };
 		045FA296215AA6C70041F17F /* ApplicaitonDetailViewController+DelegateClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045FA295215AA6C70041F17F /* ApplicaitonDetailViewController+DelegateClasses.swift */; };
 		04638455214A723800EB9B2A /* ResourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04638454214A723800EB9B2A /* ResourceViewController.swift */; };
 		04638457214ACFD700EB9B2A /* ResourceResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04638456214ACFD700EB9B2A /* ResourceResultViewController.swift */; };
@@ -173,6 +176,9 @@
 		04481C8E2140578C004AB940 /* SubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionViewController.swift; sourceTree = "<group>"; };
 		04481C9021406D23004AB940 /* ChangeNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNumberViewController.swift; sourceTree = "<group>"; };
 		04481C9221407212004AB940 /* AccountMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountMenuViewController.swift; sourceTree = "<group>"; };
+		0459DD9A215F551400768F92 /* AuditionGroupDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuditionGroupDetailViewController.swift; sourceTree = "<group>"; };
+		0459DDAA2164B3FE00768F92 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		0459DDAC2164B41000768F92 /* LaunchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchView.xib; sourceTree = "<group>"; };
 		045FA295215AA6C70041F17F /* ApplicaitonDetailViewController+DelegateClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApplicaitonDetailViewController+DelegateClasses.swift"; sourceTree = "<group>"; };
 		04638454214A723800EB9B2A /* ResourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceViewController.swift; sourceTree = "<group>"; };
 		04638456214ACFD700EB9B2A /* ResourceResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceResultViewController.swift; sourceTree = "<group>"; };
@@ -341,6 +347,7 @@
 				0422D1DC215782A400C30CCD /* DirectorAuditionListViewController.swift */,
 				0428D1A02157FDB9003EB321 /* DirectorAuditionListTableViewCell.swift */,
 				0428D1A12157FDB9003EB321 /* DirectorAuditionListTableViewCell.xib */,
+				0459DD9A215F551400768F92 /* AuditionGroupDetailViewController.swift */,
 			);
 			path = Audition;
 			sourceTree = "<group>";
@@ -486,6 +493,8 @@
 			children = (
 				04EBB9A4213D95D4003E18B6 /* ViewController.swift */,
 				04EBB9F7213D9BCE003E18B6 /* TutorialViewController.swift */,
+				0459DDAA2164B3FE00768F92 /* LaunchView.swift */,
+				0459DDAC2164B41000768F92 /* LaunchView.xib */,
 				04EBB9F9213D9BF2003E18B6 /* SignupViewController.swift */,
 				04481C8C21404C5C004AB940 /* GetStartedViewController.swift */,
 				04EBB9B6213D9658003E18B6 /* ProfileSelectionViewController.swift */,
@@ -713,6 +722,7 @@
 				04EBB9D4213D98BF003E18B6 /* Montserrat-ThinItalic.ttf in Resources */,
 				04EBB9ED213D98ED003E18B6 /* Roboto-ThinItalic.ttf in Resources */,
 				04EBB9AA213D95D7003E18B6 /* Assets.xcassets in Resources */,
+				0459DDAD2164B41000768F92 /* LaunchView.xib in Resources */,
 				0495F3642146D73A008ACD67 /* AuditionTableViewCell.xib in Resources */,
 				0463845B214ACFF200EB9B2A /* ResourceResultTableViewCell.xib in Resources */,
 				04EBB9CB213D98BF003E18B6 /* Montserrat-Regular.ttf in Resources */,
@@ -845,6 +855,7 @@
 				04EBBA13213DA3B3003E18B6 /* UITableViewExtensions.swift in Sources */,
 				04EBBA12213DA3B3003E18B6 /* General.swift in Sources */,
 				04EBBA19213DA9BC003E18B6 /* Constants.swift in Sources */,
+				0459DD9B215F551400768F92 /* AuditionGroupDetailViewController.swift in Sources */,
 				04ADF758215650F4005013E8 /* SNBlueButton.swift in Sources */,
 				04B18CAF214D8AFF00A8E6D8 /* ExperienceSelectionViewController.swift in Sources */,
 				041CDA482154F216003C2F35 /* GeneralnfoModel.swift in Sources */,
@@ -855,6 +866,7 @@
 				04EBBA09213DA3B3003E18B6 /* DictionaryExtensions.swift in Sources */,
 				04896D0E2156B5E7000FCEAA /* MeasurementHeightTableViewCell.swift in Sources */,
 				04B0D284215A0EF400DA974B /* DirectorApplicationGroupController.swift in Sources */,
+				0459DDAB2164B3FF00768F92 /* LaunchView.swift in Sources */,
 				04EBB9A5213D95D4003E18B6 /* ViewController.swift in Sources */,
 				04638455214A723800EB9B2A /* ResourceViewController.swift in Sources */,
 				04EBBA10213DA3B3003E18B6 /* DateExtensions.swift in Sources */,

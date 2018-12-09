@@ -56,7 +56,6 @@ extension CreateProfileViewController : UICollectionViewDataSource, UICollection
            titleStr = audtionPreferenceArray[indexPath.row]
         }
         var size = titleStr.getWidth(withConstraintedHeight: 32, font: AppFont.getRegular(size: 15))
-        print("Title Str == \(titleStr) and previous size \(size)")
         if size > 20 && size < 40 {
             size = 70
         }else if size >= 40 && size <= 60{
@@ -64,7 +63,6 @@ extension CreateProfileViewController : UICollectionViewDataSource, UICollection
         }else{
             size = size + 40
         }
-        print("Title Str == \(titleStr) and size \(size)")
         return CGSize(width: size, height: 32)
     }
     
@@ -81,10 +79,18 @@ extension CreateProfileViewController : UICollectionViewDataSource, UICollection
     }
     
     @objc func preferredLangugeAction(sender : UIButton) {
-        
+        for cell in prefferedLanguageCollectionView.visibleCells{
+            let profilecell  =  cell as! ProfileSelectionViewCell
+            profilecell.collectionBtn.isSelected = false
+        }
+        sender.isSelected = !sender.isSelected
     }
     
     @objc func audtionPrefrenceAction(sender : UIButton) {
-        
+        for cell in auditionPrefernceCollectionView.visibleCells{
+            let profilecell  =  cell as! ProfileSelectionViewCell
+            profilecell.collectionBtn.isSelected = false
+        }
+        sender.isSelected = !sender.isSelected
     }
 }

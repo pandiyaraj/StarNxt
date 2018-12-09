@@ -24,7 +24,7 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if userRole == UserRole.Actor{
+        if UserDefaults.standard.getUserRole() == UserRole.Actor{
             slideImages = ["Actor_Help1","Actor_Help2","Actor_Help3"]
             titleArray = ["STAY UPTO DATE","DIRECT APPLY","SUBMIT YOUR PROFILE"]
             subTitleArray = ["Casting calls wherever you are","Top acting auditions posted everyday","Showcase your talent, upload your photos and video links"]
@@ -34,11 +34,13 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
             subTitleArray = ["Submit casting calls & Audition oppurtunities","There are thousands of quality actor profiles","Get right talent"]
         }
         
+        self.navigationController?.navigationBar.isHidden = false
         self.updateUI()
         self.view.createGradientLayer()
 
         // Do any additional setup after loading the view.
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -46,7 +48,9 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.navigationBar.barTintColor = UIColor.white
+    
         self.sliderPageControl.currentPage = selectedIndex
         self.view.layoutIfNeeded()
         self.changePage(sender: sliderPageControl)
@@ -93,6 +97,7 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
     
     @IBAction func skipBtnAction() -> Void{
         let signUpVC = self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.signupvc) as! SignupViewController
+        signUpVC.userRole = userRole
         self.navigationController?.pushViewController(signUpVC, animated: true)
     }
     

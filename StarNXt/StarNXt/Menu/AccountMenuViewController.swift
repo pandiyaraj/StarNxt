@@ -8,12 +8,21 @@
 
 import UIKit
 
-class AccountMenuViewController: UIViewController {
+class AccountMenuViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let hamburgerBtn = UIBarButtonItem.init(image: UIImage.init(named: "hamburger_menu"), style: .done, target: self, action:#selector(hamburgerMenuAction(_:)))
+        self.navigationItem.leftBarButtonItem = hamburgerBtn
+        
+        self.title = "Account"
+        // Do any additional setup after loading the view.
+    }
+    
+    @objc func hamburgerMenuAction(_ sender: Any) {
+        self.slideMenuController()?.openLeft()
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,11 +31,13 @@ class AccountMenuViewController: UIViewController {
     }
     
     @IBAction func onChangeNumberAction() -> Void{
-        
+        let changeNumber = self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.changeNumberVc) as! ChangeNumberViewController
+        self.navigationController?.pushViewController(changeNumber, animated: true)
     }
     
     @IBAction func onDeleteAccount() -> Void{
-        
+        let deleteAccount = self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.deleteAccountVc) as! DeleteAccountViewController
+        self.navigationController?.pushViewController(deleteAccount, animated: true)
     }
     
 

@@ -23,17 +23,18 @@ class ProfileSelectionViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
+        self.navigationItem.backBarButtonItem = UIBarButtonItem.init(title: "", style: .plain, target: self, action: nil)
     }
     
     @IBAction func  onDirectorRoleAction() -> Void{
-        UserDefaults.standard.set(Constants.kDIRECTOR, forKey: Defaults.userRole)
+//        UserDefaults.standard.setUserRole(value: Constants.kDIRECTOR, key: Defaults.userRole)
         let tutorialVc = self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.tutorialvc) as! TutorialViewController
         tutorialVc.userRole = UserRole.Director
         self.navigationController?.pushViewController(tutorialVc, animated: true)
     }
     
     @IBAction func onActorRoleAction() -> Void{
-        UserDefaults.standard.set(Constants.kACTOR, forKey: Defaults.userRole)
+//        UserDefaults.standard.setUserRole(value: Constants.kACTOR, key: Defaults.userRole)
         let tutorialVc = self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.tutorialvc) as! TutorialViewController
         tutorialVc.userRole = UserRole.Actor
         self.navigationController?.pushViewController(tutorialVc, animated: true)

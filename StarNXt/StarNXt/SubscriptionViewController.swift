@@ -7,6 +7,8 @@
 //
 
 import UIKit
+//import InstaMojoiOS
+//import Instamojo
 
 class SubscriptionViewController: UIViewController {
 
@@ -28,16 +30,18 @@ class SubscriptionViewController: UIViewController {
     }
     
     @IBAction func planHistoryAction() -> Void{
-        let planhistoryVc = self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.planhistoryvc) as! PlanHistoryViewController
-        self.navigationController?.pushViewController(planhistoryVc, animated: true)
+        
     }
     
     @IBAction func onSubscriptionSelect() -> Void{
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.dashboardApplication()
+        appDelegate.actorDashboardApplication()
+  
+    }
+    
+    
+    func setupPayment() -> Void{
         
-//        let actorDashboardVc = self.storyboard?.instantiateViewController(withIdentifier: "actordashboardvc") as! ActorDashboardViewController
-//        self.navigationController?.pushViewController(actorDashboardVc, animated: true)
     }
     
 

@@ -29,11 +29,14 @@ class SlideViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     var notificationsVc: UIViewController!
     var helpVc : UIViewController!
     
+    var actorDashboardVc : UIViewController!
+    var directorDashboardVc : UIViewController!
+    
     var SelectedGeneralMenuIndex: IndexPath?
 
  
-    var generalMenu = ["Edit Profile","Plan History","Account","Notifications","Help"]
-    var menuIcons = ["editprofile","planhistory","account","notifications","help"]
+    var generalMenu = ["Home","Edit Profile"/*,"Plan History"*/,"Account","Notifications","Help"]
+    var menuIcons = ["","menuEdit"/*,"menuPlan"*/,"menuAccount","menuNotifications","menuHelp"]
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var profileRoleLabl : UILabel!
@@ -50,22 +53,44 @@ class SlideViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         
+        if UserDefaults.standard.getUserRole() == Constants.kACTOR{
+            let actorDashboard = self.storyboard?.instantiateViewController(withIdentifier:StoryboardIdentifier.actordashboardVc) as!
+            ActorDashboardViewController
+            self.actorDashboardVc = UINavigationController(rootViewController: actorDashboard)
+        }else {
+            let directorDashboard = self.storyboard?.instantiateViewController(withIdentifier:StoryboardIdentifier.directordashboardvc) as!
+            DirectorDashboardViewController
+            
+            self.directorDashboardVc = UINavigationController(rootViewController: directorDashboard)
+        }
+        
+        
         let createProfileVc = self.storyboard?.instantiateViewController(withIdentifier:StoryboardIdentifier.createprofilevc) as!
         CreateProfileViewController
-        self.editProfileVc = UINavigationController(rootViewController: createProfileVc)
+        let nvcEditProfile = UINavigationController(rootViewController: createProfileVc)
+        nvcEditProfile.navigationBar.barTintColor = UIColor.white
+        self.editProfileVc = nvcEditProfile
         
         let historyvc = storyboard.instantiateViewController(withIdentifier:StoryboardIdentifier.planhistoryvc) as!
         PlanHistoryViewController
-        self.planHistoryVc = UINavigationController(rootViewController: historyvc)
+        let nvcPlan = UINavigationController(rootViewController: historyvc)
+        nvcPlan.navigationBar.barTintColor = UIColor.white
+        self.planHistoryVc = nvcPlan
         
         
         let account = self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.accountmenuvc) as! AccountMenuViewController
-        self.accountVc = UINavigationController(rootViewController: account)
+        let nvcAccount = UINavigationController(rootViewController: account)
+        nvcAccount.navigationBar.barTintColor = UIColor.white
+        self.accountVc = nvcAccount
         
         let helpvc = self.storyboard?.instantiateViewController(withIdentifier:StoryboardIdentifier.helpmenuvc) as!
         HelpViewController
-        self.helpVc = UINavigationController(rootViewController: helpvc)
+        let nvcHelp = UINavigationController(rootViewController: helpvc)
+        nvcHelp.navigationBar.barTintColor = UIColor.white
+        self.helpVc = nvcHelp
 
+        
+        
         // Do any additional setup after loading the view.
         self.loadInitialView()
 
@@ -85,18 +110,13 @@ class SlideViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     
     // Mark:- Helper Methods
     func loadInitialView() -> Void{
-        
         self.profileNameLbl.text = ""
         let indexPath = IndexPath(row: 0, section: 0)
         tableView.selectRow(at: indexPath, animated: true, scrollPosition: .bottom)
-        
-        
-        
     }
     
     
     // MARK:- Button actions
-    
     // View Account button tapped
     
     @IBAction func viewAccountBtnAction(_ sender: Any) {
@@ -140,27 +160,44 @@ class SlideViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     func  tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.SelectedGeneralMenuIndex = indexPath
         self.slideMenuController()?.closeLeft()
-
-        switch indexPath.row {
-        case 0:
-            DispatchQueue.main.async {
-                self.slideMenuController()?.changeMainViewController(self.editProfileVc, close: true)
+        let selectedRow = self.generalMenu[indexPath.row]
+        switch selectedRow {
+        case "Home":
+            if UserDefaults.standard.getUserRole() == Constants.kACTOR{
+                DispatchQueue.main.async {self.slideMenuController()?.changeMainViewController(self.actorDashboardVc, close: true)
+                }
+            }else{
+                DispatchQueue.main.async {self.slideMenuController()?.changeMainViewController(self.directorDashboardVc, close: true)
+                }
             }
             break;
-        case 1:
+        case "Edit Profile":
+            
+            if UserDefaults.standard.getUserRole() == Constants.kACTOR{
+                DispatchQueue.main.async {
+                    self.slideMenuController()?.changeMainViewController(self.editProfileVc, close: true)
+                }
+            }else{
+                DispatchQueue.main.async {
+                    self.slideMenuController()?.changeMainViewController(self.editProfileVc, close: true)
+                }
+            }
+            
+            break;
+        case "Plan History":
             DispatchQueue.main.async {
-                self.slideMenuController()?.changeMainViewController(self.planHistoryVc, close: true)
+            self.slideMenuController()?.changeMainViewController(self.planHistoryVc, close: true)
             }
             break;
-        case 2:
+        case "Account":
             DispatchQueue.main.async {
                 self.slideMenuController()?.changeMainViewController(self.accountVc, close: true)
             }
             break;
-        case 3:
+        case "Notifications":
             print("Nothing")
             break;
-        case 4:
+        case "Help":
             DispatchQueue.main.async {
                 self.slideMenuController()?.changeMainViewController(self.helpVc, close: true)
             }

@@ -8,11 +8,11 @@
 
 import UIKit
 
-class ChangeNumberViewController: UIViewController {
+class ChangeNumberViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "Change Number"
         // Do any additional setup after loading the view.
     }
 

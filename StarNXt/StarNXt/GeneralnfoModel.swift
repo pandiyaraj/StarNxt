@@ -14,7 +14,7 @@ class GeneralnfoModel: NSObject, NSCoding {
 
     
     var userRole : String = ""
-    var userNumber : String = ""
+    var userMobileNumber : String = ""
     var userActiveStatus : Bool = false
     var userSubscriptionPlanIsActiveStatus : Bool = false
     var userCurrentSubscriptionPlan : SubscriptionPlan = .Month
@@ -24,7 +24,7 @@ class GeneralnfoModel: NSObject, NSCoding {
     
     func encode(with aCoder: NSCoder) {
         aCoder.encode(self.userRole, forKey: "userRole")
-        aCoder.encode(self.userNumber, forKey: "userNumber")
+        aCoder.encode(self.userMobileNumber, forKey: "userMobileNumber")
         aCoder.encode(self.userActiveStatus, forKey: "userActiveStatus")
         aCoder.encode(self.userSubscriptionPlanIsActiveStatus, forKey: "userSubscriptionPlanIsActiveStatus")
         aCoder.encode(self.userCurrentSubscriptionPlan, forKey: "userCurrentSubscriptionPlan")
@@ -35,7 +35,7 @@ class GeneralnfoModel: NSObject, NSCoding {
     
     required init?(coder aDecoder: NSCoder) {
         self.userRole =  aDecoder.decodeObject(forKey:  "userRole") as? String ?? ""
-        self.userNumber =  aDecoder.decodeObject(forKey:  "userNumber") as? String ?? ""
+        self.userMobileNumber =  aDecoder.decodeObject(forKey:  "userMobileNumber") as? String ?? ""
         self.userActiveStatus = aDecoder.decodeBool(forKey: "userActiveStatus")
         self.userSubscriptionPlanIsActiveStatus = aDecoder.decodeBool(forKey: "userSubscriptionPlanIsActiveStatus")
         self.userSubscriptionExpiry = aDecoder.decodeBool(forKey: "userSubscriptionExpiry")

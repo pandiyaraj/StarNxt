@@ -25,6 +25,12 @@ class CreateDirectorProfileViewController: BaseViewController {
         directorListCollectionHeightConstraint.constant = CGFloat(((listArray.count / 2 ) + 2 ) * 32)
     }
     
+    
+    @IBAction func getStartedAction() -> Void{
+        let getstartedVc = self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.getstartedvc) as!  GetStartedViewController
+        self.navigationController?.pushViewController(getstartedVc, animated: true)
+
+    }
 
     /*
     // MARK: - Navigation

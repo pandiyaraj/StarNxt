@@ -16,15 +16,18 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var OTPView : UIView!
     @IBOutlet weak var otpTF : SNTextField!
     @IBOutlet weak var mobileNumberLbl : UILabel!
+    
+    var userRole : String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.mobileNumberTF.text = "1234567890"
+        self.mobileNumberTF.text = "9092337961"
         mobileNumberView.addBorder(edges: .bottom, colour: UIColor.init(hex: 0x757575), thickness: 1)
         // Do any additional setup after loading the view.
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     //MARK: - Button Actions
@@ -34,7 +37,11 @@ class SignupViewController: UIViewController {
         }else if !(mobileNumberTF.text?.isPhoneNumber)!{
             self.showAlert(title: "Message", contentText: "Please enter valid mobile number", actions: nil)
         }else{
+            
             //TODO the process
+            GeneralnfoModel.sharedGeneralInfo.userMobileNumber = self.mobileNumberTF.text!
+            self.mobileNumberLbl.text = "You will receive a confirmation code via SMS to '\(GeneralnfoModel.sharedGeneralInfo.userMobileNumber)'"
+            
             self.OTPView.isHidden = false
             self.otpTF.text = ""
         }
@@ -48,10 +55,15 @@ class SignupViewController: UIViewController {
     }
     
     @IBAction func onVerifyAction() -> Void{
-        //TODO Verify
-        let getstartedVc = self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.getstartedvc) as!  GetStartedViewController
-        self.navigationController?.pushViewController(getstartedVc, animated: true)
         
+        if userRole == Constants.kDIRECTOR{
+        //TODO Verify
+        let directorProfileVc = self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.createDirectorProfilevc) as! CreateDirectorProfileViewController
+        self.navigationController?.pushViewController(directorProfileVc, animated: true)
+        }else{
+            let actorProfileVc = self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.createprofilevc) as! CreateProfileViewController
+            self.navigationController?.pushViewController(actorProfileVc, animated: true)
+        }
     }
     
     override func didReceiveMemoryWarning() {

@@ -160,15 +160,21 @@ struct StoryboardIdentifier {
     static let resourceresultvc = "resourceresultvc"
     
     static let createprofilevc = "createprofilevc"
+    static let createDirectorProfilevc = "createdirectorprofilevc"
     static let accountmenuvc = "accountmenuvc"
     static let helpmenuvc = "helpmenuvc"
     static let planhistoryvc = "planhistoryvc"
+    
+    static let changeNumberVc = "changenumbervc"
+    static let deleteAccountVc = "deleteaccountvc"
+    static let helpVc = "helpmenuvc"
     
     
     static let experiencevc = "experiencevc"
     
     static let actordashboardVc = "actordashboardvc"
-    
+    static let mainTabVc = "mainvc"
+    static let portfolioVc = "portfoliovc"
     
     
     static let directordashboardvc = "directordashboardvc"
@@ -178,6 +184,8 @@ struct StoryboardIdentifier {
     static let directorAuditionGroupVc = "auditiongroupdetailvc"
     static let directorApplicationVc = "directorapplicationvc"
     static let directorShortListVc = "directorshortlistvc"
+    static let directorSubscriptionVc = "directorSubscriptionvc"
+    static let directorSubscriptTypeVc = "DirectorSubscribeType"
     
     static let directorApplicationGrooupvc = "directorapplicationgroupvc"
     static let directorApplicationDetailVc = "applicationdetailvc"
@@ -232,34 +240,11 @@ struct CellIdentifier {
 struct URLConstants{
     
     static let BASEURL = "http://bossyincome.indofrenchtechdev.com/v1/"   //-- Dev
-    static let signUp:String = "register"
-    static let signIn:String = "user/login"
-    static let forgotPassword:String = "forgotPassword"
     
-    
-    static let getUserDetails = URLConstants.BASEURL + "user/userbyuserid"
-    static let getAllDeals = URLConstants.BASEURL + "deal/list/"
-    static let dealDetail = URLConstants.BASEURL + "deal/detail/"
-    
-    static let orderSlot = URLConstants.BASEURL +  "deal/order"
-    static let bookSlot = URLConstants.BASEURL + "deal/book"
-    static let orderCancel = URLConstants.BASEURL + "deal/payment_failure"
-    
-    static let purchasedOrderHistory = URLConstants.BASEURL + "deal/purchased"
-    
-    static let userUpdate = URLConstants.BASEURL + "userprofile/update"
-    static let userAdd = URLConstants.BASEURL + "userprofile/add"
-    
-    static let uploadImage =  URLConstants.BASEURL + "userprofile/uploadAvatar"
-    static let uploadKYC = URLConstants.BASEURL + "user/uploadkyc"
-    
-    static let withDrawAmount = URLConstants.BASEURL + "user/withdraw"
-    static let walletHistory = URLConstants.BASEURL + "user/wallet/list"
-    
-    static let avaliablePaymentList = URLConstants.BASEURL + "paymenttype/list"
-    
-    
-    static let getCities = URLConstants.BASEURL + "admin/cities"
+    static let userExists = ""
+    static let sendOTP:String = "register"
+    static let verifyOTP:String = "user/login"
+   
     
     
 }

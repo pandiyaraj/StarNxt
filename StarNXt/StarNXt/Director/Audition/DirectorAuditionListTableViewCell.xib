@@ -28,7 +28,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z9I-3t-5m4" customClass="SNCardView" customModule="StarNXt" customModuleProvider="target">
-                        <rect key="frame" x="8" y="8" width="347" height="228.5"/>
+                        <rect key="frame" x="8" y="4" width="347" height="236.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Personalised Audition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cj-kK-3jY">
                                 <rect key="frame" x="16" y="10" width="117" height="15"/>
@@ -37,13 +37,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kaala 2 Gangster Team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPt-b0-cSh">
-                                <rect key="frame" x="16" y="40" width="206" height="21.5"/>
+                                <rect key="frame" x="16" y="40" width="206" height="29.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="it5-dM-7X3">
-                                <rect key="frame" x="16" y="76.5" width="129" height="17"/>
+                                <rect key="frame" x="16" y="84.5" width="129" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="Ii8-iA-y5S"/>
                                 </constraints>
@@ -54,7 +54,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qoi-vO-7dW">
-                                <rect key="frame" x="16" y="98.5" width="119" height="17"/>
+                                <rect key="frame" x="16" y="106.5" width="119" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="LXc-G2-l18"/>
                                 </constraints>
@@ -65,7 +65,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title: Kaala 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lCD-by-cvX">
-                                <rect key="frame" x="16" y="120.5" width="81" height="17"/>
+                                <rect key="frame" x="16" y="128.5" width="81" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="UZr-EX-Rks"/>
                                 </constraints>
@@ -74,44 +74,44 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gmx-GU-HXt">
-                                <rect key="frame" x="8" y="167.5" width="347" height="1"/>
+                                <rect key="frame" x="8" y="175.5" width="347" height="1"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="YiM-qb-h3M"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="397" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1T-ja-RBg">
-                                <rect key="frame" x="157" y="181.5" width="33" height="22"/>
+                                <rect key="frame" x="157" y="189.5" width="33" height="22"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profiles Recieved" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdL-N5-9uj">
-                                <rect key="frame" x="127.5" y="208.5" width="92" height="15"/>
+                                <rect key="frame" x="127.5" y="216.5" width="92" height="15"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ypt-YI-EFP">
-                                <rect key="frame" x="292" y="188.5" width="35" height="15"/>
+                                <rect key="frame" x="292" y="196.5" width="35" height="15"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Active" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlf-pg-UuG">
-                                <rect key="frame" x="292" y="208.5" width="35" height="15"/>
+                                <rect key="frame" x="292" y="216.5" width="35" height="15"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                 <color key="textColor" red="0.49411764705882355" green="0.82745098039215681" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Move" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMY-Or-MM4">
-                                <rect key="frame" x="25" y="208.5" width="30" height="15"/>
+                                <rect key="frame" x="25" y="216.5" width="30" height="15"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nB3-Cd-s2m">
-                                <rect key="frame" x="25" y="173.5" width="30" height="30"/>
+                                <rect key="frame" x="25" y="181.5" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="9tW-TQ-Rng"/>
                                     <constraint firstAttribute="width" constant="30" id="Jh2-C7-ygX"/>
@@ -160,10 +160,11 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" red="0.95294117647058818" green="0.96862745098039216" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
-                    <constraint firstItem="z9I-3t-5m4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="1ZH-YU-1DQ"/>
+                    <constraint firstItem="z9I-3t-5m4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="1ZH-YU-1DQ"/>
                     <constraint firstAttribute="trailing" secondItem="z9I-3t-5m4" secondAttribute="trailing" constant="8" id="b0K-aE-i6W"/>
-                    <constraint firstAttribute="bottom" secondItem="z9I-3t-5m4" secondAttribute="bottom" constant="8" id="f1u-c1-qJX"/>
+                    <constraint firstAttribute="bottom" secondItem="z9I-3t-5m4" secondAttribute="bottom" constant="4" id="f1u-c1-qJX"/>
                     <constraint firstItem="z9I-3t-5m4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="uC8-dc-hjb"/>
                 </constraints>
             </tableViewCellContentView>

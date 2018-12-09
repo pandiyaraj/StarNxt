@@ -8,14 +8,25 @@
 
 import UIKit
 
-class HelpViewController: UIViewController {
+class HelpViewController: BaseViewController {
 
     @IBOutlet weak var helpTableview : UITableView!
     var helpMenuArray = ["Contact us", "Terms and conditions", "Privacy policy","App info"]
     override func viewDidLoad() {
         super.viewDidLoad()
         helpTableview.register(UINib.loadNib(nibName: CellIdentifier.helpmenuTableViewCell), forCellReuseIdentifier: CellIdentifier.helpmenuTableViewCell)
+        
+        self.title = "Help"
+        self.helpTableview.tableFooterView = UIView()
+        helpTableview.separatorColor = UIColor.clear
         // Do any additional setup after loading the view.
+        let hamburgerBtn = UIBarButtonItem.init(image: UIImage.init(named: "hamburger_menu"), style: .done, target: self, action:#selector(hamburgerMenuAction(_:)))
+        self.navigationItem.leftBarButtonItem = hamburgerBtn
+        // Do any additional setup after loading the view.
+    }
+    
+    @objc func hamburgerMenuAction(_ sender: Any) {
+        self.slideMenuController()?.openLeft()
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,12 +58,12 @@ extension HelpViewController : UITableViewDataSource,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.helpmenuTableViewCell, for: indexPath) as! HelpMenuTableViewCell
-        cell.titleLabel.text = helpMenuArray[indexPath.row]
+        cell.titleTextLabel.text = helpMenuArray[indexPath.row]
         if indexPath.row == 0 {
-            cell.detailTextLabel?.isHidden = false
-            cell.detailTextLabel?.text = "Questions? Need help?"
+            cell.descLabel?.isHidden = false
+            cell.descLabel?.text = "Questions? Need help?"
         }else{
-            cell.detailTextLabel?.isHidden = true
+            cell.descLabel?.isHidden = true
         }
         return cell
     }

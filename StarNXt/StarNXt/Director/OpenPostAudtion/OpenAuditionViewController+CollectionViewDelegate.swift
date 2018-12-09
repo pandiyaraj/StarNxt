@@ -49,7 +49,6 @@ extension OpenAuditionViewController : UICollectionViewDataSource, UICollectionV
             titleStr = projectListArray[indexPath.row]
         }
         var size = titleStr.getWidth(withConstraintedHeight: 32, font: AppFont.getRegular(size: 15))
-        print("Title Str == \(titleStr) and previous size \(size)")
         if size > 20 && size < 40 {
             size = 70
         }else if size >= 40 && size <= 60{
@@ -57,7 +56,6 @@ extension OpenAuditionViewController : UICollectionViewDataSource, UICollectionV
         }else{
             size = size + 40
         }
-        print("Title Str == \(titleStr) and size \(size)")
         return CGSize(width: size, height: 32)
     }
     

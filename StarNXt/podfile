@@ -9,4 +9,6 @@ target 'StarNXt' do
 pod 'GrowingTextView', '~> 0.4'
 pod 'OnlyPictures'
 pod 'IQKeyboardManagerSwift'
+#pod 'Instamojo', :git => 'https://github.com/Instamojo/ios-sdk.git', :tag => '1.0.12'
+#pod 'InstaMojoiOS', '0.0.3'
 end

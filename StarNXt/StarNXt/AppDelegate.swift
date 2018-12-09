@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//@import Instamojo
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,13 +17,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let isUserSignedIn = UserDefaults.standard.bool(forKey: Defaults.IsSignedIn)
-        if isUserSignedIn {
-            
+        
+        /*if UserDefaults.standard.getUserRole() == Constants.kACTOR{
+            self.actorDashboardApplication()
+        }else if UserDefaults.standard.getUserRole() == Constants.kDIRECTOR{
+            self.directorDashboardApplication()
         }else{
             
-        }
+        }*/
         
+//        Instamojo.setup()
         return true
     }
 
@@ -48,7 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
-    func dashboardApplication(){
+    func actorDashboardApplication(){
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
@@ -56,7 +60,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let leftViewController = storyboard.instantiateViewController(withIdentifier: "SlideVC") as! SlideViewController
         let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
         
-        UINavigationBar.setGradientColor(color1: UIColor(red: 1.00, green: 0.07, blue: 0.40, alpha: 1), color2: UIColor(red: 1.00, green: 0.36, blue: 0.22, alpha: 1))
+        nvc.navigationBar.setGradientColor(color1: UIColor(red: 1.00, green: 0.07, blue: 0.40, alpha: 1), color2: UIColor(red: 1.00, green: 0.36, blue: 0.22, alpha: 1))
         
         let slideMenuController = ContainerViewController(mainViewController:nvc, leftMenuViewController: leftViewController)
         slideMenuController.automaticallyAdjustsScrollViewInsets = true
@@ -66,6 +70,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     }
 
-
+    
+    func directorDashboardApplication(){
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let mainViewController = storyboard.instantiateViewController(withIdentifier: StoryboardIdentifier.mainTabVc) as! MainViewController
+        let leftViewController = storyboard.instantiateViewController(withIdentifier: "SlideVC") as! SlideViewController
+        let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
+        
+        nvc.navigationBar.isHidden = true
+        nvc.navigationBar.barTintColor = UIColor.white
+        nvc.navigationBar.setGradientColor(color1: UIColor(red: 1.00, green: 0.07, blue: 0.40, alpha: 1), color2: UIColor(red: 1.00, green: 0.36, blue: 0.22, alpha: 1))
+        
+        let slideMenuController = ContainerViewController(mainViewController:nvc, leftMenuViewController: leftViewController)
+        slideMenuController.automaticallyAdjustsScrollViewInsets = true
+        slideMenuController.delegate = mainViewController as? SlideMenuControllerDelegate
+        self.window?.rootViewController = slideMenuController
+        self.window?.makeKeyAndVisible()
+        
+    }
 }
 

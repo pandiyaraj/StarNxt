@@ -21,6 +21,9 @@ class OpenAuditionViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.registerCell()
+        
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white,NSAttributedStringKey.font : AppFont.getMedium(size: 20)]
+        self.navigationController?.navigationBar.setGradientColor(color1: UIColor(red: 1.00, green: 0.07, blue: 0.40, alpha: 1), color2: UIColor(red: 1.00, green: 0.36, blue: 0.22, alpha: 1))
         // Do any additional setup after loading the view.
     }
     

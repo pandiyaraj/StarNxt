@@ -10,7 +10,7 @@ import UIKit
 
 class HelpMenuTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var titleLabel : UILabel!
+    @IBOutlet weak var titleTextLabel : UILabel!
     @IBOutlet weak var descLabel : UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()

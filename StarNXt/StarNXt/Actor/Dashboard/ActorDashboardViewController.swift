@@ -16,11 +16,27 @@ class ActorDashboardViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        self.title = "StarNXT"
        
 
 
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func hamburgerMenuAction(_ sender: Any) {
+        self.slideMenuController()?.openLeft()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.backBarButtonItem = UIBarButtonItem.init(title: " ", style: .plain, target: self, action: nil)
+        self.view.backgroundColor = UIColor.init(red: 243.0/255.0, green: 247.0/255.0, blue: 245.0/255.0, alpha: 1.0)
+        
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white,NSAttributedStringKey.font : AppFont.getMedium(size: 20)]
+        self.navigationController?.navigationBar.setGradientColor(color1: UIColor(red: 1.00, green: 0.07, blue: 0.40, alpha: 1), color2: UIColor(red: 1.00, green: 0.36, blue: 0.22, alpha: 1))
+        
+        let hamburgerBtn = UIBarButtonItem.init(image: UIImage.init(named: "hamburger_menu"), style: .done, target: self, action:#selector(hamburgerMenuAction(_:)))
+        self.navigationItem.leftBarButtonItem = hamburgerBtn
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     override func viewDidAppear(_ animated: Bool) {

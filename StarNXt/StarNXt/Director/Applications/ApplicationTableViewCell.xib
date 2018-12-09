@@ -31,28 +31,28 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWI-S7-T1W" customClass="SNCardView" customModule="StarNXt" customModuleProvider="target">
-                        <rect key="frame" x="8" y="8" width="335" height="149.5"/>
+                        <rect key="frame" x="8" y="4" width="335" height="157.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Kaala 2 Gangster Team" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xi-c9-ClK">
-                                <rect key="frame" x="16" y="15" width="299" height="30.5"/>
+                                <rect key="frame" x="16" y="15" width="299" height="38.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="397" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jg5-yk-CS2">
-                                <rect key="frame" x="16" y="55.5" width="87" height="59"/>
+                                <rect key="frame" x="16" y="63.5" width="87" height="59"/>
                                 <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="48"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Profiles Received" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3j-MY-9TG">
-                                <rect key="frame" x="16" y="125" width="92" height="14.5"/>
+                                <rect key="frame" x="16" y="133" width="92" height="14.5"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27 New Profiles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l60-WG-f0J">
-                                <rect key="frame" x="235" y="125" width="84" height="14.5"/>
+                                <rect key="frame" x="235" y="133" width="84" height="14.5"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -66,7 +66,7 @@
                                 <state key="normal" image="moreActin"/>
                             </button>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6yW-TC-geG" customClass="OnlyHorizontalPictures" customModule="OnlyPictures">
-                                <rect key="frame" x="180" y="75" width="150" height="40"/>
+                                <rect key="frame" x="180" y="83" width="150" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Ryh-X2-a7d"/>
@@ -93,10 +93,11 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" red="0.95294117647058818" green="0.96862745098039216" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="bWI-S7-T1W" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="4Cm-Oe-i6b"/>
-                    <constraint firstAttribute="bottom" secondItem="bWI-S7-T1W" secondAttribute="bottom" constant="8" id="b2b-xU-I9l"/>
-                    <constraint firstItem="bWI-S7-T1W" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="c6A-ow-kbF"/>
+                    <constraint firstAttribute="bottom" secondItem="bWI-S7-T1W" secondAttribute="bottom" constant="4" id="b2b-xU-I9l"/>
+                    <constraint firstItem="bWI-S7-T1W" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="c6A-ow-kbF"/>
                     <constraint firstAttribute="trailing" secondItem="bWI-S7-T1W" secondAttribute="trailing" constant="8" id="fEo-kC-G7X"/>
                 </constraints>
             </tableViewCellContentView>

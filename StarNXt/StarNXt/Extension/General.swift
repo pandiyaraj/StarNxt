@@ -129,24 +129,36 @@ extension Encodable {
     }
 }
 
+
 extension UINavigationBar {
     
-   static func setGradientColor(color1:  UIColor , color2 : UIColor) -> Void {
+    func setGradientColor(color1:  UIColor , color2 : UIColor) -> Void {
         let gradient = CAGradientLayer()
         let sizeLength = UIScreen.main.bounds.size.height * 2
         let defaultNavigationBarFrame = CGRect(x: 0, y: 0, width: sizeLength, height: 64)
-        gradient.frame = defaultNavigationBarFrame
+        gradient.frame = self.bounds
         gradient.colors = [color1.cgColor, color2.cgColor]
         gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
         gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
-        UINavigationBar.appearance().setBackgroundImage(self.image(fromLayer: gradient), for: .default)
+        UINavigationBar.appearance().setBackgroundImage(image(fromLayer: gradient), for: .default)
     }
     
-   static func image(fromLayer layer: CALayer) -> UIImage {
+    func image(fromLayer layer: CALayer) -> UIImage {
         UIGraphicsBeginImageContext(layer.frame.size)
         layer.render(in: UIGraphicsGetCurrentContext()!)
         let outputImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return outputImage!
+    }
+}
+
+extension UserDefaults{
+    
+    public func setUserRole(value : String, key : String){
+        UserDefaults.standard.set(value, forKey: key)
+    }
+    
+    public func getUserRole() -> String {
+        return UserDefaults.standard.value(forKey: Defaults.userRole) as? String ?? ""
     }
 }

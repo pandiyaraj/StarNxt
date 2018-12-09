@@ -8,12 +8,19 @@
 
 import UIKit
 
-class DeleteAccountViewController: UIViewController {
+class DeleteAccountViewController: BaseViewController {
 
+    
+    @IBOutlet weak var otpView : UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.otpView.isHidden = true
+        self.title = "Delete Account"
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func onDoneAction() -> Void{
+        self.otpView.isHidden = false
     }
 
     override func didReceiveMemoryWarning() {

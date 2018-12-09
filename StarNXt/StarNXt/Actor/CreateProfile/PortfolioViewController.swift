@@ -13,11 +13,26 @@ class PortfolioViewController: UIViewController {
     @IBOutlet weak var portfolioCollectionView : UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        var stringSt = "Test"
-        stringSt.getWidth(withConstraintedHeight: 32, font: UIFont.systemFont(ofSize: 16))
         
         portfolioCollectionView.register(UINib.loadNib(nibName: CellIdentifier.portfolioCell), forCellWithReuseIdentifier: CellIdentifier.portfolioCell)
+        
+        self.title = "Portfolio"
+        
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white,NSAttributedStringKey.font : AppFont.getMedium(size: 20)]
+        self.navigationController?.navigationBar.setGradientColor(color1: UIColor(red: 1.00, green: 0.07, blue: 0.40, alpha: 1), color2: UIColor(red: 1.00, green: 0.36, blue: 0.22, alpha: 1))
+        
+        self.navigationItem.backBarButtonItem = UIBarButtonItem.init(title: "", style: .plain
+            , target: self, action: nil)
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
+    @IBAction func onNextAction() -> Void{
+        let experienceVc = self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.experiencevc) as! ExperienceSelectionViewController
+        self.navigationController?.pushViewController(experienceVc, animated: true)
     }
 
     override func didReceiveMemoryWarning() {

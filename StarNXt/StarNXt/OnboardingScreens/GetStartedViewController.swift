@@ -22,8 +22,19 @@ class GetStartedViewController: UIViewController {
     }
     
     @IBAction func onGetStartAction() -> Void{
-        let subscriptionVc =  self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.subscriptionvc) as! SubscriptionViewController
-        self.navigationController?.pushViewController(subscriptionVc, animated: true)
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        if UserDefaults.standard.getUserRole() == Constants.kDIRECTOR{
+            appDelegate.directorDashboardApplication()
+            
+        /*let subscriptionVc =  self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.directorSubscriptionVc) as! DirectorSubscriptionViewController
+            self.navigationController?.pushViewController(subscriptionVc, animated: true)*/
+            
+        }else{
+            appDelegate.actorDashboardApplication()
+            /* let subscriptionVc =  self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.subscriptionvc) as! SubscriptionViewController
+            self.navigationController?.pushViewController(subscriptionVc, animated: true)*/
+        }
     }
 
     override func didReceiveMemoryWarning() {

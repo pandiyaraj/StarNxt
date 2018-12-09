@@ -18,7 +18,7 @@ open class GrowingTextView: UITextView {
     override open var text: String! {
         didSet { setNeedsDisplay() }
     }
-    private weak var heightConstraint: NSLayoutConstraint?
+    private var heightConstraint: NSLayoutConstraint?
     
     // Maximum length of text. 0 means no limit.
     @IBInspectable open var maxLength: Int = 0
@@ -57,8 +57,8 @@ open class GrowingTextView: UITextView {
     private func commonInit() {
         contentMode = .redraw
         associateConstraints()
-        NotificationCenter.default.addObserver(self, selector: #selector(textDidChange), name: .UITextViewTextDidChange, object: self)
-        NotificationCenter.default.addObserver(self, selector: #selector(textDidEndEditing), name: .UITextViewTextDidEndEditing, object: self)
+        NotificationCenter.default.addObserver(self, selector: #selector(textDidChange), name: NSNotification.Name.UITextViewTextDidChange, object: self)
+        NotificationCenter.default.addObserver(self, selector: #selector(textDidEndEditing), name: NSNotification.Name.UITextViewTextDidEndEditing, object: self)
     }
     
     deinit {

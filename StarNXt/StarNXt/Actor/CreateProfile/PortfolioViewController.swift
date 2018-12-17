@@ -59,18 +59,24 @@ extension PortfolioViewController : UICollectionViewDataSource, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
+        return 6
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifier.portfolioCell, for: indexPath) as! PortfolioCollectionViewCell
+        if indexPath.row == 5{
+            cell.addPhotoView.isHidden = false
+        }else{
+            cell.addPhotoView.isHidden = true
+        }
+//        cell.profileImage.image =
         return cell
     }
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
-        let numberOfItemsPerRow: Int = 4
+        let numberOfItemsPerRow: Int = 3
         let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
         let totalSpace = flowLayout.sectionInset.left
             + flowLayout.sectionInset.right

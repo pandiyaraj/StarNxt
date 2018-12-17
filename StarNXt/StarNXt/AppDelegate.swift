@@ -62,6 +62,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         nvc.navigationBar.setGradientColor(color1: UIColor(red: 1.00, green: 0.07, blue: 0.40, alpha: 1), color2: UIColor(red: 1.00, green: 0.36, blue: 0.22, alpha: 1))
         
+        nvc.navigationBar.barTintColor = UIColor.white
         let slideMenuController = ContainerViewController(mainViewController:nvc, leftMenuViewController: leftViewController)
         slideMenuController.automaticallyAdjustsScrollViewInsets = true
         slideMenuController.delegate = mainViewController as? SlideMenuControllerDelegate
@@ -89,6 +90,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController = slideMenuController
         self.window?.makeKeyAndVisible()
         
+    }
+    
+    func setupInitialView() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateInitialViewController()
+        self.window?.rootViewController = controller
+        self.window?.makeKeyAndVisible()
+
     }
 }
 

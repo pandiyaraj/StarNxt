@@ -8,12 +8,17 @@
 
 import UIKit
 
-class ResourceResultViewController: UIViewController {
+class ResourceResultViewController: BaseViewController {
 
     @IBOutlet weak var resultTableView : UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         resultTableView.register(UINib.loadNib(nibName: CellIdentifier.resourceTableViewCell), forCellReuseIdentifier: CellIdentifier.resourceTableViewCell)
+      
+        self.navigationItem.backBarButtonItem = UIBarButtonItem.init(title: " ", style: .plain, target: self, action: nil)
+        self.view.backgroundColor = UIColor.init(red: 243.0/255.0, green: 247.0/255.0, blue: 245.0/255.0, alpha: 1.0)
+        
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white,NSAttributedStringKey.font : AppFont.getMedium(size: 20)]
         // Do any additional setup after loading the view.
     }
 

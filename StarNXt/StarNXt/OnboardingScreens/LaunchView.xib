@@ -32,7 +32,7 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUBMIT YOUR PROFILE" lineBreakMode="middleTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PX7-KC-hb3">
-                    <rect key="frame" x="16" y="363" width="270" height="154"/>
+                    <rect key="frame" x="16" y="393" width="270" height="154"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="270" id="T96-f0-MgQ"/>
                     </constraints>
@@ -41,7 +41,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OtW-GX-1bw">
-                    <rect key="frame" x="16" y="547" width="319" height="17.5"/>
+                    <rect key="frame" x="16" y="577" width="319" height="17.5"/>
                     <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -52,7 +52,7 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="OtW-GX-1bw" secondAttribute="trailing" constant="40" id="3XG-1U-ikj"/>
                 <constraint firstItem="OtW-GX-1bw" firstAttribute="top" secondItem="PX7-KC-hb3" secondAttribute="bottom" constant="30" id="8fy-PE-fHP"/>
                 <constraint firstItem="7Uh-j2-c0e" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="90" id="AJw-TT-5Z7"/>
-                <constraint firstItem="PX7-KC-hb3" firstAttribute="top" secondItem="7Uh-j2-c0e" secondAttribute="bottom" constant="70" id="FAC-hJ-btw"/>
+                <constraint firstItem="PX7-KC-hb3" firstAttribute="top" secondItem="7Uh-j2-c0e" secondAttribute="bottom" constant="100" id="FAC-hJ-btw"/>
                 <constraint firstItem="PX7-KC-hb3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Gri-Y7-CNG"/>
                 <constraint firstItem="OtW-GX-1bw" firstAttribute="leading" secondItem="PX7-KC-hb3" secondAttribute="leading" id="yEZ-mW-6Zb"/>
                 <constraint firstItem="7Uh-j2-c0e" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="zUb-Lc-DZP"/>

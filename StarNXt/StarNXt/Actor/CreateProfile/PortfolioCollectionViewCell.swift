@@ -11,6 +11,7 @@ import UIKit
 class PortfolioCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var profileImage : UIImageView!
+    @IBOutlet weak var addPhotoView : UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -22,6 +22,11 @@ class DeleteAccountViewController: BaseViewController {
     @IBAction func onDoneAction() -> Void{
         self.otpView.isHidden = false
     }
+    
+    @IBAction func onVerifyOTPAction() -> Void{
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.setupInitialView()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

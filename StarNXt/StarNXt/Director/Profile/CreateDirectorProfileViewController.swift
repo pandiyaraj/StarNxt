@@ -12,7 +12,7 @@ class CreateDirectorProfileViewController: BaseViewController {
 
     @IBOutlet weak var directorListCollectionView : UICollectionView!
     @IBOutlet weak var directorListCollectionHeightConstraint : NSLayoutConstraint!
-    var listArray = ["Director", "Co Director", "Associate Director", "Assistant Director", "Casting Director", "Serial Director","Short film Director"]
+    var listArray = ["Director", "Co Director","Manager", "Associate Director", "Assistant Director", "Casting Director", "Serial Director","Short Film Director"]
 
     override func viewDidLoad() {
         super.viewDidLoad()

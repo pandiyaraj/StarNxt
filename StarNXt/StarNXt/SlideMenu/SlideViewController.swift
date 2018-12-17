@@ -75,6 +75,7 @@ class SlideViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         PlanHistoryViewController
         let nvcPlan = UINavigationController(rootViewController: historyvc)
         nvcPlan.navigationBar.barTintColor = UIColor.white
+        
         self.planHistoryVc = nvcPlan
         
         

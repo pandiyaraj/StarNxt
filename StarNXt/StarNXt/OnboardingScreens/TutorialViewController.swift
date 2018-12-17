@@ -25,13 +25,13 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         
         if UserDefaults.standard.getUserRole() == UserRole.Actor{
-            slideImages = ["Actor_Help1","Actor_Help2","Actor_Help3"]
-            titleArray = ["STAY UPTO DATE","DIRECT APPLY","SUBMIT YOUR PROFILE"]
-            subTitleArray = ["Casting calls wherever you are","Top acting auditions posted everyday","Showcase your talent, upload your photos and video links"]
+            slideImages = ["Actor_Help3","Actor_Help2","Actor_Help1"]
+            titleArray = ["SUBMIT YOUR PROFILE","DIRECT APPLY","STAY UPTO DATE"]
+            subTitleArray = ["Where actors, models and other performers make their careers","Top acting auditions posted everyday","Casting calls wherever you are"]
         }else{
             slideImages = ["Director_Help1","Director_Help2","Director_Help3"]
             titleArray = ["POST YOUR AUDITION","TALENT FINDER","EASY AND EFFICIENT"]
-            subTitleArray = ["Submit casting calls & Audition oppurtunities","There are thousands of quality actor profiles","Get right talent"]
+            subTitleArray = ["There are thousands of quality actor profiles.","Finding the best talent is easier than ever.","We've made the application process a breeze."]
         }
         
         self.navigationController?.navigationBar.isHidden = false

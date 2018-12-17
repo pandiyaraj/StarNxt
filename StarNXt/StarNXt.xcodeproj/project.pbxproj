@@ -143,6 +143,8 @@
 		04EBBA16213DA3B3003E18B6 /* ConvenienceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBA08213DA3B3003E18B6 /* ConvenienceExtensions.swift */; };
 		04EBBA19213DA9BC003E18B6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBA18213DA9BC003E18B6 /* Constants.swift */; };
 		04EBBA1B213E8DFB003E18B6 /* SNTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EBBA1A213E8DFB003E18B6 /* SNTextField.swift */; };
+		04EE961E21C659C100A866DE /* DirectorPlanSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EE961D21C659C100A866DE /* DirectorPlanSelectionController.swift */; };
+		04EE962021C65B1600A866DE /* DirectorPlanTypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EE961F21C65B1600A866DE /* DirectorPlanTypeController.swift */; };
 		04F573DC2152BE13004283CE /* SNButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F573DB2152BE13004283CE /* SNButton.swift */; };
 		04F574002153B4F6004283CE /* CreateProfileViewController+CollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F573FF2153B4F6004283CE /* CreateProfileViewController+CollectionViewDelegate.swift */; };
 		04F574032153B63A004283CE /* ProfileSelectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F574012153B63A004283CE /* ProfileSelectionViewCell.swift */; };
@@ -288,6 +290,8 @@
 		04EBBA08213DA3B3003E18B6 /* ConvenienceExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvenienceExtensions.swift; sourceTree = "<group>"; };
 		04EBBA18213DA9BC003E18B6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		04EBBA1A213E8DFB003E18B6 /* SNTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNTextField.swift; sourceTree = "<group>"; };
+		04EE961D21C659C100A866DE /* DirectorPlanSelectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectorPlanSelectionController.swift; sourceTree = "<group>"; };
+		04EE961F21C65B1600A866DE /* DirectorPlanTypeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectorPlanTypeController.swift; sourceTree = "<group>"; };
 		04F573DB2152BE13004283CE /* SNButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNButton.swift; sourceTree = "<group>"; };
 		04F573FF2153B4F6004283CE /* CreateProfileViewController+CollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateProfileViewController+CollectionViewDelegate.swift"; sourceTree = "<group>"; };
 		04F574012153B63A004283CE /* ProfileSelectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSelectionViewCell.swift; sourceTree = "<group>"; };
@@ -318,6 +322,8 @@
 				049D3075215D4FF000094288 /* DirectorShortListViewController+DelegateClasses.swift */,
 				04C6738D21B01D0D007D391B /* DirectorSubscriptionViewController.swift */,
 				04C6738F21B02675007D391B /* SubscriptionTypeViewController.swift */,
+				04EE961D21C659C100A866DE /* DirectorPlanSelectionController.swift */,
+				04EE961F21C65B1600A866DE /* DirectorPlanTypeController.swift */,
 				045FA290215AA63C0041F17F /* Common */,
 				04896D182156CAE4000FCEAA /* Profile */,
 				04896D192156CAFE000FCEAA /* PersonalizedPostaudtion */,
@@ -891,6 +897,8 @@
 				0459DDAB2164B3FF00768F92 /* LaunchView.swift in Sources */,
 				04EBB9A5213D95D4003E18B6 /* ViewController.swift in Sources */,
 				04638455214A723800EB9B2A /* ResourceViewController.swift in Sources */,
+				04EE961E21C659C100A866DE /* DirectorPlanSelectionController.swift in Sources */,
+				04EE962021C65B1600A866DE /* DirectorPlanTypeController.swift in Sources */,
 				04EBBA10213DA3B3003E18B6 /* DateExtensions.swift in Sources */,
 				0495F3662146D7BC008ACD67 /* AuditionModel.swift in Sources */,
 				04EBBA0B213DA3B3003E18B6 /* UIImageViewExtensions.swift in Sources */,

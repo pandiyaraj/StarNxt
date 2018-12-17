@@ -37,6 +37,7 @@ class ActorDashboardViewController: UIViewController {
         let hamburgerBtn = UIBarButtonItem.init(image: UIImage.init(named: "hamburger_menu"), style: .done, target: self, action:#selector(hamburgerMenuAction(_:)))
         self.navigationItem.leftBarButtonItem = hamburgerBtn
         self.tabBarController?.tabBar.isHidden = false
+        self.navigationController?.navigationBar.barTintColor = UIColor.white
     }
     
     override func viewDidAppear(_ animated: Bool) {

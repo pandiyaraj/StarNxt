@@ -442,14 +442,18 @@ public extension UIView {
     }
     
     
-    public func createGradientLayerColor(color1 : UIColor , color2 :UIColor) -> Void{
+    public func createGradientLayerColor(color1 : UIColor , color2 :UIColor, locations : Bool = false) -> Void{
         let  gradientLayer = CAGradientLayer()
         
         gradientLayer.frame = self.bounds
         
         gradientLayer.colors = [color1.cgColor,color2.cgColor]
+        if locations == true{
+//            gradientLayer.locations = [1,0]
+        }else{
         gradientLayer.startPoint = CGPoint(x: 0.0, y: 0.5)
         gradientLayer.endPoint = CGPoint(x: 1.0, y: 0.5)
+        }
         self.layer.insertSublayer(gradientLayer, at: 0)
     }
     

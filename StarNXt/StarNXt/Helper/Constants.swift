@@ -190,7 +190,8 @@ struct StoryboardIdentifier {
     static let directorApplicationGrooupvc = "directorapplicationgroupvc"
     static let directorApplicationDetailVc = "applicationdetailvc"
     
-   
+    static let directorPlanSelectionVc = "directorplanselectionvc"
+    static let directorPlanTypeVc = "directorplantype"
     
     
 }

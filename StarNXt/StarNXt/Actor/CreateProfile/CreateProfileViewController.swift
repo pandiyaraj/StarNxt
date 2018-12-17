@@ -42,7 +42,9 @@ class CreateProfileViewController: UIViewController {
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: " ", style: .plain, target: self, action: nil)
         self.navigationController?.isNavigationBarHidden = false
+        self.navigationItem.backBarButtonItem = UIBarButtonItem.init(title: "", style: .plain, target: self, action: nil)
 
+        self.navigationController?.navigationBar.barTintColor = UIColor.white
         
         if isFromMenu{
             self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white,NSAttributedStringKey.font : AppFont.getMedium(size: 20)]

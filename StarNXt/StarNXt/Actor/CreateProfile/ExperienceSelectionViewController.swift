@@ -46,8 +46,12 @@ class ExperienceSelectionViewController: UIViewController {
     }
     
     @IBAction func onDoneAction() -> Void{
-        let appdelegate =  UIApplication.shared.delegate as! AppDelegate
-        appdelegate.actorDashboardApplication()
+        
+        let getStartedVc = self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.getstartedvc) as! GetStartedViewController
+        self.navigationController?.pushViewController(getStartedVc, animated: true)
+        
+//        let appdelegate =  UIApplication.shared.delegate as! AppDelegate
+//        appdelegate.actorDashboardApplication()
     }
     
     

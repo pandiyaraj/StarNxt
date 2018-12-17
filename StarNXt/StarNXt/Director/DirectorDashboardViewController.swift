@@ -13,6 +13,7 @@ class DirectorDashboardViewController: UIViewController {
     @IBOutlet weak var personalizedAuditionView : UIView!
     @IBOutlet weak var openAuditionView : UIView!
     @IBOutlet weak var resourcesView : UIView!
+    @IBOutlet weak var auditionProfileView : UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,12 +38,13 @@ class DirectorDashboardViewController: UIViewController {
         self.tabBarController?.tabBar.isHidden = false
     }
     override func viewDidAppear(_ animated: Bool) {
-        self.personalizedAuditionView.createGradientLayerColor(color1: UIColor(red: 0.42, green: 0.07, blue: 0.80, alpha: 1), color2: UIColor(red: 0.15, green: 0.46, blue: 0.99, alpha: 1))
+        self.personalizedAuditionView.createGradientLayerColor(color1: UIColor(red: 0.42, green: 0.07, blue: 0.80, alpha: 1), color2: UIColor(red: 0.15, green: 0.46, blue: 0.99, alpha: 1),locations: true)
         
         self.openAuditionView.createGradientLayerColor(color1: UIColor(red: 1.00, green: 0.07, blue: 0.40, alpha: 1), color2: UIColor(red: 1.00, green: 0.36, blue: 0.22, alpha: 1))
         
         self.resourcesView.createGradientLayerColor(color1: UIColor(red: 0.19, green: 0.14, blue: 0.68, alpha: 1), color2: UIColor(red: 0.78, green: 0.43, blue: 0.84, alpha: 1))
-
+        
+        self.auditionProfileView.createGradientLayerColor(color1: UIColor(red: 0.32, green: 0.71, blue: 0.28, alpha: 1), color2: UIColor(red: 0.01, green: 0.66, blue: 0.73, alpha: 1),locations: true)
     }
     
     @IBAction func onPostPersonalisedAction() -> Void{
@@ -57,6 +59,11 @@ class DirectorDashboardViewController: UIViewController {
     
     @IBAction func onResourceAction() -> Void{
     
+    }
+    
+    @IBAction func onAuditionProfileAction() -> Void{
+        let openauditionVc = self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.directorAuditionListVc) as! DirectorAuditionListViewController
+        self.navigationController?.pushViewController(openauditionVc, animated: true)
     }
     
 

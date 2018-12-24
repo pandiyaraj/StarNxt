@@ -40,3 +40,17 @@ class BaseViewController: UIViewController {
     */
 
 }
+
+extension BaseViewController : UITextFieldDelegate{
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if let tf = textField as? SNTextField{
+            tf.setBorderColor(selected: true)
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if let tf = textField as? SNTextField{
+            tf.setBorderColor(selected: false)
+        }
+    }
+}

@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 //@import Instamojo
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -25,8 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }else{
             
         }*/
+        IQKeyboardManager.shared.enable = true
         
 //        Instamojo.setup()
+        SharedMethods.sharedInstance.loadStateList()
         return true
     }
 
@@ -76,11 +79,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        let mainViewController = storyboard.instantiateViewController(withIdentifier: StoryboardIdentifier.mainTabVc) as! MainViewController
+        let mainViewController = storyboard.instantiateViewController(withIdentifier: StoryboardIdentifier.directordashboardvc) as! DirectorDashboardViewController
         let leftViewController = storyboard.instantiateViewController(withIdentifier: "SlideVC") as! SlideViewController
         let nvc: UINavigationController = UINavigationController(rootViewController: mainViewController)
         
-        nvc.navigationBar.isHidden = true
+//        nvc.navigationBar.isHidden = true
         nvc.navigationBar.barTintColor = UIColor.white
         nvc.navigationBar.setGradientColor(color1: UIColor(red: 1.00, green: 0.07, blue: 0.40, alpha: 1), color2: UIColor(red: 1.00, green: 0.36, blue: 0.22, alpha: 1))
         
@@ -99,5 +102,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
 
     }
+    
 }
 

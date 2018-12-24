@@ -70,9 +70,9 @@ extension HelpViewController : UITableViewDataSource,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
-            return 70
+            return 100
         }else{
-            return 58
+            return 70
         }
     }
 }

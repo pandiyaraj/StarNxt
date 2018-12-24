@@ -20,6 +20,12 @@ class PersonalisedViewController: UIViewController {
     @IBOutlet weak var LanguageCollectionViewConstraint : NSLayoutConstraint!
     @IBOutlet weak var experienceTableviewHeightConstraint : NSLayoutConstraint!
     @IBOutlet weak var measurementHeightConstraint : NSLayoutConstraint!
+    
+    @IBOutlet weak var maleBtn : SNBlueButton!
+    @IBOutlet weak var femaleBtn : SNBlueButton!
+    @IBOutlet weak var transBtn : SNBlueButton!
+    
+    @IBOutlet weak var confirmationView : UIView!
 
 
     var projectListArray = ["Feature Film", "Web Series", "Serial", "Short Film", "Advertisement", "Modeling","Stage Play","Tele Film","Pilot Movie","Events"]
@@ -32,8 +38,8 @@ class PersonalisedViewController: UIViewController {
         super.viewDidLoad()
         self.registerCells()
         self.updateHeightConstraints()
-        
-        
+        self.confirmationView.isHidden = true
+        self.title = "Premium Audition"
         
         // Do any additional setup after loading the view.
     }
@@ -56,13 +62,46 @@ class PersonalisedViewController: UIViewController {
     }
     
     func updateHeightConstraints() -> Void{
-        projectListCollectionHeightConstraint.constant = CGFloat(((projectListArray.count / 2 ) + 1 ) * 32)
-        LanguageCollectionViewConstraint.constant = CGFloat(((knownLanguageArray.count / 2 ) + 1 ) * 32)
+        projectListCollectionHeightConstraint.constant = CGFloat(((projectListArray.count / 2 ) + 1 ) * 32) - 20
+        LanguageCollectionViewConstraint.constant = CGFloat(((knownLanguageArray.count / 2 ) + 1 ) * 32) - 20
         experienceTableviewHeightConstraint.constant = CGFloat(experienceListArray.count * 60)
         measurementHeightConstraint.constant = CGFloat(measurementListArray.count * 60)
 
     }
 
+    
+    @IBAction func onGenderAction(sender : SNBlueButton) -> Void{
+        maleBtn.isSelected = false
+        femaleBtn.isSelected = false
+        transBtn.isSelected = false
+        
+        sender.isSelected = true
+    }
+    
+    @IBAction func onDoneAction() -> Void{
+        UIView.animate(withDuration: 0.5) {
+            self.confirmationView.isHidden = false
+        }
+    }
+    
+    @IBAction func onCanelAction() -> Void{
+        UIView.animate(withDuration: 0.5) {
+            self.confirmationView.isHidden = true
+        }
+    }
+    
+    @IBAction func onPostAction() -> Void{
+        UIView.animate(withDuration: 0.5) {
+            self.confirmationView.isHidden = true
+        }
+        
+        let okAlert = UIAlertAction.init(title: "Ok", style: .default) { (action) in
+            self.navigationController?.popViewController(animated: true)
+        }
+        self.showAlert(title: "Message", contentText: "Your audition was posted successfully", actions: [okAlert])
+    }
+    
+    
     /*
     // MARK: - Navigation
 

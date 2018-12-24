@@ -12,11 +12,12 @@ class AuditionTableViewCell: UITableViewCell {
 
     @IBOutlet weak var auditionNameLbl : UILabel!
     @IBOutlet weak var audtionProjectLbl : UILabel!
+    @IBOutlet weak var audtionStatusLbl: UILabel!
     @IBOutlet weak var directorLbl : UILabel!
     @IBOutlet weak var postedByLbl : UILabel!
     @IBOutlet weak var postedOnLbl : UILabel!
     @IBOutlet weak var lastDateLbl : UILabel!
-    
+    @IBOutlet weak var lastDateKeyLbl : UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

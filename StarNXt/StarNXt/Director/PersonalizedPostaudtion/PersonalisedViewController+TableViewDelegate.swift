@@ -35,13 +35,13 @@ extension PersonalisedViewController : UITableViewDataSource, UITableViewDelegat
         }else if tableView == measurmentListView{
             let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.measurementcell, for: indexPath) as! MeasurementTableViewCell
             cell.measurementHeightView.isHidden = true
-            if indexPath.row == 0 {
-                cell.measurementHeightView.isHidden = false
-                
-            }else{
+//            if indexPath.row == 0 {
+//                cell.measurementHeightView.isHidden = false
+//
+//            }else{
                 cell.titleLbl.text = self.measurementListArray[indexPath.row]
                 cell.detailTitleLbl.text = selectedMeasurementStr
-            }
+//            }
             return cell
 
         }else{
@@ -51,15 +51,7 @@ extension PersonalisedViewController : UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if tableView == measurmentListView{
-            if indexPath.row == 0 {
-                return 75
-            }else{
-                return 50
-            }
-        }else{
-            return 50
-        }
+        return 59
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

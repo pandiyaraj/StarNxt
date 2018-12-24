@@ -18,21 +18,31 @@ class SNTextField: UITextField, UITextFieldDelegate {
     }
     */
 
-    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
-        delegate = self
-        createBorder()
+//        createBorder()
+        self.setBorderColor(selected: false)
     }
     
     required override init(frame: CGRect) {
         super.init(frame: frame)
-        delegate = self
-        createBorder()
+//        createBorder()
+        self.setBorderColor(selected: false)
+
     }
     
     func createBorder() {
-        self.addBorder(edges: .bottom, colour: UIColor.init(hex: 0xCCCCCC), thickness: 1.0)
-        self.cornerRadius = 4.0
+        self.addBorder(edges: .bottom, colour:Themecolor.placeholdercolor , thickness: 1.0)
+//        self.cornerRadius = 4.0
+    }
+    
+    func setBorderColor(selected : Bool) -> Void{
+        if selected{
+            self.addBorder(edges: .bottom, colour:Themecolor.placeholderSelectedColor , thickness: 1.0)
+        }else{
+            
+            self.addBorder(edges: .bottom, colour: Themecolor.placeholdercolor , thickness: 1.0)
+        }
+        self.layer.masksToBounds = true
     }
 }

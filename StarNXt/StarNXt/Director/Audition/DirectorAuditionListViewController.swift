@@ -19,7 +19,10 @@ class DirectorAuditionListViewController: BaseViewController {
     @IBOutlet weak var createNewGrpBtn : UIButton!
     @IBOutlet weak var groupNameTitleLbl : UILabel!
     
-    var isAudition : Bool = true
+    @IBOutlet weak var lineView : UIView!
+    @IBOutlet weak var viewLeadingConstraint : NSLayoutConstraint!
+    
+    var isPremiumAudition : Bool = true
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,11 +35,11 @@ class DirectorAuditionListViewController: BaseViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white,NSAttributedStringKey.font : AppFont.getMedium(size: 20)]
         self.navigationController?.navigationBar.setGradientColor(color1: UIColor(red: 1.00, green: 0.07, blue: 0.40, alpha: 1), color2: UIColor(red: 1.00, green: 0.36, blue: 0.22, alpha: 1))
         
-        let hamburgerBtn = UIBarButtonItem.init(image: UIImage.init(named: "hamburger_menu"), style: .done, target: self, action:#selector(hamburgerMenuAction(_:)))
-        self.navigationItem.leftBarButtonItem = hamburgerBtn
+//        let hamburgerBtn = UIBarButtonItem.init(image: UIImage.init(named: "hamburger_menu"), style: .done, target: self, action:#selector(hamburgerMenuAction(_:)))
+//        self.navigationItem.leftBarButtonItem = hamburgerBtn
         
         self.auditionListTableView.backgroundColor = UIColor.init(hex: 0xF3F7FF)
-
+        self.view.bringSubview(toFront: self.lineView)
         // Do any additional setup after loading the view.
     }
     
@@ -46,6 +49,7 @@ class DirectorAuditionListViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
+        
     }
     
     func initialiseUI() -> Void{
@@ -62,9 +66,13 @@ class DirectorAuditionListViewController: BaseViewController {
         self.createNewGrpBtn.isHidden = true
         auditionListTableView.isHidden = false
         noItemView.isHidden = true
-        self.noItemView.titleLbl.text = "No audition posted yet"
-        isAudition = true
+        self.noItemView.titleLbl.text = "No premium audition posted yet"
+        isPremiumAudition = true
         auditionListTableView.reloadData()
+        
+        UIView.animate(withDuration: 1.0) {
+            self.viewLeadingConstraint.constant = 0
+        }
     }
     
     @IBAction func groupBtnAction(sender : UIButton) -> Void{
@@ -72,12 +80,15 @@ class DirectorAuditionListViewController: BaseViewController {
         sender.isSelected = true
         auditionListTableView.isHidden = false
         noItemView.isHidden = true
-        self.createNewGrpBtn.isHidden = false
+//        self.createNewGrpBtn.isHidden = false
         
 
-        self.noItemView.titleLbl.text = "No group created yet"
-        isAudition = false
+        self.noItemView.titleLbl.text = "No open audition posted yet"
+        isPremiumAudition = false
         auditionListTableView.reloadData()
+        UIView.animate(withDuration: 1.0) {
+            self.viewLeadingConstraint.constant = self.lineView.width
+        }
     }
     
     func deselectAllButton() -> Void {
@@ -107,47 +118,76 @@ extension DirectorAuditionListViewController : UITableViewDataSource, UITableVie
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if isAudition == true{
         let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.directorAuditionListcell, for: indexPath) as! DirectorAuditionListTableViewCell
-        return cell
-        }else{
-            let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier.directorApplicationListcell, for: indexPath) as! ApplicationTableViewCell
-            cell.moreBtn.tag = indexPath.row
-            if indexPath.row % 2 == 0 {
-                cell.moreBtn.isHidden = false
-            }else{
-                cell.moreBtn.isHidden = true
-            }
             
-            cell.applicationStatusLbl.text = "Auditions"
-            cell.newProfileLbl.text = "397 Profiles Received"
-            cell.moreBtn.addTarget(self, action: #selector(moreBtnAction(sender:)), for: .touchUpInside)
-            return cell
-        }
-    }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if isAudition{
-        return 235
+            let attributedText = NSMutableAttributedString(string: "396\n", attributes: [NSAttributedStringKey.font: AppFont.getMedium(size: 16),NSAttributedStringKey.foregroundColor : UIColor.white])
+            
+            attributedText.append(NSAttributedString(string: "Profiles Received", attributes: [NSAttributedStringKey.font: AppFont.getRobotoRegular(size: 12),NSAttributedStringKey.foregroundColor : UIColor.white]))
+            
+            cell.auditionsReceivedButton.setAttributedTitle(attributedText, for: .normal)
+            
+            cell.auditionsReceivedButton.titleLabel?.numberOfLines = 2
+        cell.auditionsReceivedButton.titleLabel?.textAlignment = .center
+            cell.profileShortlistButton.titleLabel?.numberOfLines = 2
+        cell.profileShortlistButton.titleLabel?.textAlignment = .center
+            let attributedText1 = NSMutableAttributedString(string: "73\n", attributes: [NSAttributedStringKey.font: AppFont.getMedium(size: 16),NSAttributedStringKey.foregroundColor : UIColor.white])
+            
+            attributedText1.append(NSAttributedString(string: "Profiles Shortlisted", attributes: [NSAttributedStringKey.font: AppFont.getRobotoRegular(size: 12),NSAttributedStringKey.foregroundColor : UIColor.white]))
+            
+            cell.profileShortlistButton.setAttributedTitle(attributedText1, for: .normal)
+            
+            cell.profileShortlistButton.setGradientColor(color1: UIColor(red: 0.42, green: 0.07, blue: 0.80, alpha: 1), color2: UIColor(red: 0.15, green: 0.46, blue: 0.99, alpha: 1))
+            cell.profileShortlistButton.tag = indexPath.row
+            cell.profileShortlistButton.addTarget(self, action: #selector(onProfileShortlistAction(sender:)), for: .touchUpInside)
+        
+            cell.auditionsReceivedButton.setGradientColor(color1: UIColor(red: 1.00, green: 0.07, blue: 0.40, alpha: 1), color2: UIColor(red: 1.00, green: 0.36, blue: 0.22, alpha: 1))
+            cell.auditionsReceivedButton.tag = indexPath.row
+            cell.auditionsReceivedButton.addTarget(self, action: #selector(onProfileReceivedAction(sender:)), for: .touchUpInside)
+            
+            
+            
+            let statusAttributedText = NSMutableAttributedString(string: "Status: ", attributes: [NSAttributedStringKey.font: AppFont.getRobotoRegular(size: 12),NSAttributedStringKey.foregroundColor : UIColor.init(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.54)])
+            if indexPath.row % 2 == 0 {
+                statusAttributedText.append(NSAttributedString(string: "Active", attributes: [NSAttributedStringKey.font: AppFont.getRobotoRegular(size: 14),NSAttributedStringKey.foregroundColor : UIColor.init(hex: 0x7ed321)]))
+            }else{
+                statusAttributedText.append(NSAttributedString(string: "Closed", attributes: [NSAttributedStringKey.font: AppFont.getRobotoRegular(size: 12),NSAttributedStringKey.foregroundColor : UIColor.init(hex: 0xff1265)]))
+            }
+            cell.auditionStatusLbl.attributedText = statusAttributedText
+
+        if isPremiumAudition == true{
+            cell.auditionOpenTypeDurationLabel.isHidden = true
+            cell.auditionOpenTypeDurationValueLabel.isHidden = true
+            cell.auditionsReceivedButton.isHidden = false
+            cell.profileShortlistButton.isHidden = false
         }else{
-            return 160
+            cell.auditionOpenTypeDurationLabel.isHidden = false
+            cell.auditionOpenTypeDurationValueLabel.isHidden = false
+            cell.auditionsReceivedButton.isHidden = true
+            cell.profileShortlistButton.isHidden = true
         }
+            
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 235
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if isAudition {
-            let detailVc = self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.auditiondetailvc) as! AuditionDetailViewController
-            detailVc.userRole = UserRole.Director
-            if indexPath.row % 2 == 0 {
-            detailVc.auditionType = AuditionType.Open
-            
-            }else{
-                detailVc.auditionType = AuditionType.Personalised
-            }
-            self.navigationController?.pushViewController(detailVc, animated: true)
+        let detailVc = self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.auditiondetailvc) as! AuditionDetailViewController
+        
+        if isPremiumAudition {
+            detailVc.auditionType = AuditionType.Personalised
         }else{
-            let detailVc = self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.directorAuditionGroupVc) as! AuditionGroupDetailViewController
-            self.navigationController?.pushViewController(detailVc, animated: true)
+            detailVc.auditionType = AuditionType.Open
         }
+        
+        if indexPath.row % 2 == 0 {
+            detailVc.audtionStatus = Audition_Status.Active
+        }else{
+            detailVc.audtionStatus = Audition_Status.Closed
+        }
+        self.navigationController?.pushViewController(detailVc, animated: true)
     }
     
    
@@ -205,4 +245,17 @@ extension DirectorAuditionListViewController {
         }
     }
     
+}
+
+extension DirectorAuditionListViewController{
+    @objc func onProfileReceivedAction(sender : UIButton) -> Void{
+        let applicaitonDetailVc = self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.directorApplicationGrooupvc) as! DirectorApplicationGroupController
+        self.navigationController?.pushViewController(applicaitonDetailVc, animated: true)
+    }
+    
+    @objc func onProfileShortlistAction(sender : UIButton) -> Void{
+        let applicaitonDetailVc = self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.directorApplicationGrooupvc) as! DirectorApplicationGroupController
+        applicaitonDetailVc.isFromShortList = true
+        self.navigationController?.pushViewController(applicaitonDetailVc, animated: true)
+    }
 }

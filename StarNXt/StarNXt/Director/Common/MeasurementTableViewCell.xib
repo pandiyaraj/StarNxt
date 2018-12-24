@@ -30,30 +30,12 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m9e-TM-cwS">
                         <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWu-Bx-v2X">
-                                <rect key="frame" x="10" y="7" width="73.5" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="3wF-tw-jFo"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Normal" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZs-2u-lQu">
-                                <rect key="frame" x="228" y="7" width="53" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="D0J-s0-drs"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Adh-Wh-IFi">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Adh-Wh-IFi">
                                 <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whg-p2-cQP">
-                                        <rect key="frame" x="10" y="10" width="35.5" height="14.5"/>
-                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
+                                        <rect key="frame" x="10" y="10" width="47" height="19"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.41999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -72,6 +54,24 @@
                                     <constraint firstItem="whg-p2-cQP" firstAttribute="top" secondItem="Adh-Wh-IFi" secondAttribute="top" constant="10" id="gH5-z8-sv5"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sWu-Bx-v2X">
+                                <rect key="frame" x="30" y="7" width="73.5" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3wF-tw-jFo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Normal" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZs-2u-lQu">
+                                <rect key="frame" x="228" y="7" width="53" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="D0J-s0-drs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -80,7 +80,7 @@
                             <constraint firstItem="eZs-2u-lQu" firstAttribute="centerY" secondItem="m9e-TM-cwS" secondAttribute="centerY" id="Dhl-e7-N2v"/>
                             <constraint firstItem="Adh-Wh-IFi" firstAttribute="top" secondItem="m9e-TM-cwS" secondAttribute="top" id="OL7-UR-VTO"/>
                             <constraint firstAttribute="trailing" secondItem="eZs-2u-lQu" secondAttribute="trailing" constant="5" id="PRl-dy-nXM"/>
-                            <constraint firstItem="sWu-Bx-v2X" firstAttribute="leading" secondItem="m9e-TM-cwS" secondAttribute="leading" constant="10" id="edP-BY-nfB"/>
+                            <constraint firstItem="sWu-Bx-v2X" firstAttribute="leading" secondItem="m9e-TM-cwS" secondAttribute="leading" constant="30" id="edP-BY-nfB"/>
                             <constraint firstAttribute="trailing" secondItem="Adh-Wh-IFi" secondAttribute="trailing" id="nwH-cM-FSn"/>
                             <constraint firstItem="sWu-Bx-v2X" firstAttribute="centerY" secondItem="m9e-TM-cwS" secondAttribute="centerY" id="qVj-K2-2uv"/>
                         </constraints>

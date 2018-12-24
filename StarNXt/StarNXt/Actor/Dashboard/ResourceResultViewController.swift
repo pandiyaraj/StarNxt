@@ -11,10 +11,13 @@ import UIKit
 class ResourceResultViewController: BaseViewController {
 
     @IBOutlet weak var resultTableView : UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         resultTableView.register(UINib.loadNib(nibName: CellIdentifier.resourceTableViewCell), forCellReuseIdentifier: CellIdentifier.resourceTableViewCell)
       
+
+        
         self.navigationItem.backBarButtonItem = UIBarButtonItem.init(title: " ", style: .plain, target: self, action: nil)
         self.view.backgroundColor = UIColor.init(red: 243.0/255.0, green: 247.0/255.0, blue: 245.0/255.0, alpha: 1.0)
         
@@ -70,7 +73,7 @@ extension ResourceResultViewController : UITableViewDataSource,UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -87,6 +90,21 @@ extension ResourceResultViewController : UITableViewDataSource,UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 400
+        return 770
     }
 }
+
+
+//extension ResourceResultViewController : UICollectionViewDataSource, UICollectionViewDelegate{
+//    func numberOfSections(in collectionView: UICollectionView) -> Int {
+//        return 1
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return 10
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//
+//    }
+//}

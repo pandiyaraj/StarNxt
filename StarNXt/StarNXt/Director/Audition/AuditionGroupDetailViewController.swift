@@ -57,7 +57,6 @@ extension AuditionGroupDetailViewController : UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailVc = self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.auditiondetailvc) as! AuditionDetailViewController
-        detailVc.userRole = UserRole.Director
         if indexPath.row % 2 == 0 {
             detailVc.auditionType = AuditionType.Open
             

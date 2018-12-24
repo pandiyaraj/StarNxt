@@ -24,20 +24,20 @@
                 <rect key="frame" x="0.0" y="0.0" width="333" height="75.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ssA-bD-1wl">
-                        <rect key="frame" x="8" y="5" width="317" height="65.5"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ssA-bD-1wl" customClass="ShadowCardView" customModule="StarNXt" customModuleProvider="target">
+                        <rect key="frame" x="16" y="5" width="301" height="65.5"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="UWT-He-vWK">
-                                <rect key="frame" x="5" y="2" width="310" height="61.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="-10" translatesAutoresizingMaskIntoConstraints="NO" id="UWT-He-vWK">
+                                <rect key="frame" x="20" y="2" width="261" height="61.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KWv-hV-NY2">
-                                        <rect key="frame" x="0.0" y="0.0" width="310" height="45"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="261" height="44"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                         <color key="textColor" red="0.25882352941176467" green="0.25882352941176467" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNm-d9-cAr">
-                                        <rect key="frame" x="0.0" y="45" width="310" height="16.5"/>
+                                        <rect key="frame" x="0.0" y="34" width="261" height="27.5"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                         <color key="textColor" red="0.74117647058823533" green="0.74117647058823533" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -53,39 +53,17 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="UWT-He-vWK" secondAttribute="bottom" constant="2" id="A1D-lz-eoM"/>
                             <constraint firstItem="UWT-He-vWK" firstAttribute="top" secondItem="ssA-bD-1wl" secondAttribute="top" constant="2" id="MuY-n7-2Pq"/>
-                            <constraint firstAttribute="trailing" secondItem="UWT-He-vWK" secondAttribute="trailing" constant="2" id="hAS-ds-CdN"/>
-                            <constraint firstItem="UWT-He-vWK" firstAttribute="leading" secondItem="ssA-bD-1wl" secondAttribute="leading" constant="5" id="v80-r1-aSJ"/>
+                            <constraint firstAttribute="trailing" secondItem="UWT-He-vWK" secondAttribute="trailing" constant="20" id="hAS-ds-CdN"/>
+                            <constraint firstItem="UWT-He-vWK" firstAttribute="leading" secondItem="ssA-bD-1wl" secondAttribute="leading" constant="20" id="v80-r1-aSJ"/>
                         </constraints>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="calibratedRGB"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                <real key="value" value="0.5"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                <real key="value" value="2"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
-                                <size key="value" width="2" height="3"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                <real key="value" value="1"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                <real key="value" value="1"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
+                <color key="backgroundColor" red="0.95294117649999999" green="0.96862745100000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
-                    <constraint firstItem="ssA-bD-1wl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Ler-w3-ycg"/>
+                    <constraint firstItem="ssA-bD-1wl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Ler-w3-ycg"/>
                     <constraint firstAttribute="bottom" secondItem="ssA-bD-1wl" secondAttribute="bottom" constant="5" id="TUi-q7-LAy"/>
                     <constraint firstItem="ssA-bD-1wl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="YBP-1w-xYs"/>
-                    <constraint firstAttribute="trailing" secondItem="ssA-bD-1wl" secondAttribute="trailing" constant="8" id="gcP-Qg-Ye6"/>
+                    <constraint firstAttribute="trailing" secondItem="ssA-bD-1wl" secondAttribute="trailing" constant="16" id="gcP-Qg-Ye6"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

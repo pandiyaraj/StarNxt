@@ -132,6 +132,11 @@ extension Encodable {
 
 extension UINavigationBar {
     
+    /// Set Gradient color for UINavigaiton bar
+    ///
+    /// - Parameters:
+    ///   - color1: first coloe
+    ///   - color2: second color
     func setGradientColor(color1:  UIColor , color2 : UIColor) -> Void {
         let gradient = CAGradientLayer()
         let sizeLength = UIScreen.main.bounds.size.height * 2
@@ -160,5 +165,48 @@ extension UserDefaults{
     
     public func getUserRole() -> String {
         return UserDefaults.standard.value(forKey: Defaults.userRole) as? String ?? ""
+    }
+}
+
+extension Double {
+    /// Rounds the double to decimal places value
+    func toString() -> String {
+        let tempVar = String(format: "%g", self)
+        return tempVar
+    }
+    
+    func toIndianCurrencyString() -> String {
+        let tempVar = String(format: "%g", self)
+        return "\u{20B9}" + tempVar
+    }
+}
+
+extension Int {
+    
+    func toIndianCurrencyString() -> String {
+        let tempVar = String(format: "%d", self)
+        return "\u{20B9}" + tempVar
+    }
+}
+
+
+extension UIButton{
+    
+    func setGradientColor(color1:  UIColor , color2 : UIColor) -> Void {
+        let gradient = CAGradientLayer()
+        let sizeLength = UIScreen.main.bounds.size.height * 2
+        gradient.frame = self.bounds
+        gradient.colors = [color1.cgColor, color2.cgColor]
+        gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
+        gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
+        self.setBackgroundImage(image(fromLayer: gradient), for: .normal)
+    }
+    
+    func image(fromLayer layer: CALayer) -> UIImage {
+        UIGraphicsBeginImageContext(layer.frame.size)
+        layer.render(in: UIGraphicsGetCurrentContext()!)
+        let outputImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return outputImage!
     }
 }

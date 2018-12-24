@@ -29,17 +29,16 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="r67-Jd-QmY"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZn-Y8-1so">
-                        <rect key="frame" x="16" y="36" width="293" height="21"/>
+                        <rect key="frame" x="16" y="32" width="293" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="Tlg-WG-Eyg"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -49,7 +48,7 @@
                     <constraint firstItem="NhA-oH-eL7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="gIb-m3-piO"/>
                     <constraint firstItem="oZn-Y8-1so" firstAttribute="trailing" secondItem="NhA-oH-eL7" secondAttribute="trailing" id="izZ-2v-JKj"/>
                     <constraint firstAttribute="trailing" secondItem="NhA-oH-eL7" secondAttribute="trailing" constant="16" id="t1r-Jk-7ad"/>
-                    <constraint firstItem="oZn-Y8-1so" firstAttribute="top" secondItem="NhA-oH-eL7" secondAttribute="bottom" constant="5" id="xOC-Ef-zoI"/>
+                    <constraint firstItem="oZn-Y8-1so" firstAttribute="top" secondItem="NhA-oH-eL7" secondAttribute="bottom" constant="1" id="xOC-Ef-zoI"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

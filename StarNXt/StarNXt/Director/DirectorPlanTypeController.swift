@@ -44,17 +44,17 @@ class DirectorPlanTypeController: UIViewController {
             
             self.firstPlanTypeLbl.text = "Premium Audition"
             self.firstPlanCountLbl.text = "1"
-            self.firstPlanAmountLbl.text = "99"
+            self.firstPlanAmountLbl.text = 99.toIndianCurrencyString()
             
             
             self.secondPlanTypeLbl.text = "Premium Auditions"
             self.secondPlanCountLbl.text = "3"
-            self.secondPlanAmountLbl.text = "399"
+            self.secondPlanAmountLbl.text = 437.toIndianCurrencyString()
             
             
             self.thirdPlanTypeLbl.text = "Premium Auditions"
             self.thirdPlanCountLbl.text = "5"
-            self.thirdPlanAmountLbl.text = "1347"
+            self.thirdPlanAmountLbl.text = 1347.toIndianCurrencyString()
             
             
             self.viewTopConstraint.constant = 300
@@ -63,17 +63,17 @@ class DirectorPlanTypeController: UIViewController {
             self.openView.isHidden = false
             self.firstPlanTypeLbl.text = "Open Audition"
             self.firstPlanCountLbl.text = "1"
-            self.firstPlanAmountLbl.text = "99"
+            self.firstPlanAmountLbl.text = 99.toIndianCurrencyString()
             
             
             self.secondPlanTypeLbl.text = "Open Auditions"
             self.secondPlanCountLbl.text = "3"
-            self.secondPlanAmountLbl.text = "399"
+            self.secondPlanAmountLbl.text = 437.toIndianCurrencyString()
             
             
             self.thirdPlanTypeLbl.text = "Open Auditions"
             self.thirdPlanCountLbl.text = "5"
-            self.thirdPlanAmountLbl.text = "1347"
+            self.thirdPlanAmountLbl.text = 1347.toIndianCurrencyString()
             self.viewTopConstraint.constant = 209
         }
         // Do any additional setup after loading the view.
@@ -83,6 +83,11 @@ class DirectorPlanTypeController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    
+    @IBAction func goToDashboardAction() -> Void{
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.directorDashboardApplication()
+    }
     /*
     // MARK: - Navigation
 

@@ -683,6 +683,7 @@ open class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
         
         removeViewController(self.mainViewController)
         self.mainViewController = mainViewController
+        self.navigationController?.navigationBar.barTintColor = UIColor.white
         setUpViewController(mainContainerView, targetViewController: mainViewController)
         if close {
             closeLeft()

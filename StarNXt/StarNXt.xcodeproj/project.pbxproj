@@ -43,6 +43,8 @@
 		0459DD9B215F551400768F92 /* AuditionGroupDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459DD9A215F551400768F92 /* AuditionGroupDetailViewController.swift */; };
 		0459DDAB2164B3FF00768F92 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459DDAA2164B3FE00768F92 /* LaunchView.swift */; };
 		0459DDAD2164B41000768F92 /* LaunchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0459DDAC2164B41000768F92 /* LaunchView.xib */; };
+		045BBD4A21CFD0D50016528D /* state_city.json in Resources */ = {isa = PBXBuildFile; fileRef = 045BBD4921CFD0D40016528D /* state_city.json */; };
+		045BBD4C21CFF3470016528D /* SharedMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045BBD4B21CFF3470016528D /* SharedMethods.swift */; };
 		045FA296215AA6C70041F17F /* ApplicaitonDetailViewController+DelegateClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045FA295215AA6C70041F17F /* ApplicaitonDetailViewController+DelegateClasses.swift */; };
 		04638455214A723800EB9B2A /* ResourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04638454214A723800EB9B2A /* ResourceViewController.swift */; };
 		04638457214ACFD700EB9B2A /* ResourceResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04638456214ACFD700EB9B2A /* ResourceResultViewController.swift */; };
@@ -70,7 +72,11 @@
 		0495F3682147931B008ACD67 /* AuditionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495F3672147931B008ACD67 /* AuditionDetailViewController.swift */; };
 		0495F36B2147933F008ACD67 /* AuditionDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0495F3692147933F008ACD67 /* AuditionDetailTableViewCell.swift */; };
 		0495F36C2147933F008ACD67 /* AuditionDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0495F36A2147933F008ACD67 /* AuditionDetailTableViewCell.xib */; };
+		049C284421CA601100CF6F5B /* ActorPlanSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C284321CA601100CF6F5B /* ActorPlanSelectionController.swift */; };
+		049C284621CA604500CF6F5B /* ActorViewPlanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C284521CA604500CF6F5B /* ActorViewPlanController.swift */; };
+		049C284A21CAA19B00CF6F5B /* PremiumAuditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049C284921CAA19B00CF6F5B /* PremiumAuditionViewController.swift */; };
 		049D3076215D4FF000094288 /* DirectorShortListViewController+DelegateClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D3075215D4FF000094288 /* DirectorShortListViewController+DelegateClasses.swift */; };
+		049F7C2D21CBBBD20008D538 /* ShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F7C2C21CBBBD10008D538 /* ShadowButton.swift */; };
 		04ADF758215650F4005013E8 /* SNBlueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADF757215650F4005013E8 /* SNBlueButton.swift */; };
 		04ADF75A21565F14005013E8 /* PersonalisedViewController+CollectionviewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADF75921565F14005013E8 /* PersonalisedViewController+CollectionviewDelegate.swift */; };
 		04ADF75C2156A2BD005013E8 /* PersonalisedViewController+TableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04ADF75B2156A2BD005013E8 /* PersonalisedViewController+TableViewDelegate.swift */; };
@@ -85,9 +91,17 @@
 		04B18CB1214E16FD00A8E6D8 /* PortfolioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B18CB0214E16FD00A8E6D8 /* PortfolioViewController.swift */; };
 		04B18CB4214F71F100A8E6D8 /* PortfolioCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B18CB2214F71F100A8E6D8 /* PortfolioCollectionViewCell.swift */; };
 		04B18CB5214F71F100A8E6D8 /* PortfolioCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04B18CB3214F71F100A8E6D8 /* PortfolioCollectionViewCell.xib */; };
+		04C032DF21C8D7BB00351ECA /* ViewPlansController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C032DE21C8D7BB00351ECA /* ViewPlansController.swift */; };
 		04C6738521AFFA06007D391B /* GeneralInfoServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C6738421AFFA06007D391B /* GeneralInfoServices.swift */; };
 		04C6738E21B01D0D007D391B /* DirectorSubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C6738D21B01D0D007D391B /* DirectorSubscriptionViewController.swift */; };
 		04C6739021B02675007D391B /* SubscriptionTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C6738F21B02675007D391B /* SubscriptionTypeViewController.swift */; };
+		04CC4F5821CC111A000A695C /* ResourceResultListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC4F5721CC111A000A695C /* ResourceResultListViewController.swift */; };
+		04CC4F5D21CC1199000A695C /* ResourceListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC4F5B21CC1199000A695C /* ResourceListTableViewCell.swift */; };
+		04CC4F5E21CC1199000A695C /* ResourceListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04CC4F5C21CC1199000A695C /* ResourceListTableViewCell.xib */; };
+		04D7509121CC200D000AB0B5 /* ResourceListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7508F21CC200D000AB0B5 /* ResourceListCollectionViewCell.swift */; };
+		04D7509221CC200D000AB0B5 /* ResourceListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04D7509021CC200D000AB0B5 /* ResourceListCollectionViewCell.xib */; };
+		04D7509521CCF3E8000AB0B5 /* ShadowCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D7509421CCF3E8000AB0B5 /* ShadowCardView.swift */; };
+		04E7A4AF21CD6C3C0010DEB1 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E7A4AE21CD6C3C0010DEB1 /* DetailTableViewController.swift */; };
 		04EBB9A3213D95D4003E18B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EBB9A2213D95D4003E18B6 /* AppDelegate.swift */; };
 		04EBB9A5213D95D4003E18B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EBB9A4213D95D4003E18B6 /* ViewController.swift */; };
 		04EBB9A8213D95D4003E18B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04EBB9A6213D95D4003E18B6 /* Main.storyboard */; };
@@ -188,6 +202,8 @@
 		0459DD9A215F551400768F92 /* AuditionGroupDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuditionGroupDetailViewController.swift; sourceTree = "<group>"; };
 		0459DDAA2164B3FE00768F92 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		0459DDAC2164B41000768F92 /* LaunchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchView.xib; sourceTree = "<group>"; };
+		045BBD4921CFD0D40016528D /* state_city.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = state_city.json; sourceTree = "<group>"; };
+		045BBD4B21CFF3470016528D /* SharedMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedMethods.swift; sourceTree = "<group>"; };
 		045FA295215AA6C70041F17F /* ApplicaitonDetailViewController+DelegateClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApplicaitonDetailViewController+DelegateClasses.swift"; sourceTree = "<group>"; };
 		04638454214A723800EB9B2A /* ResourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceViewController.swift; sourceTree = "<group>"; };
 		04638456214ACFD700EB9B2A /* ResourceResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceResultViewController.swift; sourceTree = "<group>"; };
@@ -215,7 +231,11 @@
 		0495F3672147931B008ACD67 /* AuditionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuditionDetailViewController.swift; sourceTree = "<group>"; };
 		0495F3692147933F008ACD67 /* AuditionDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuditionDetailTableViewCell.swift; sourceTree = "<group>"; };
 		0495F36A2147933F008ACD67 /* AuditionDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuditionDetailTableViewCell.xib; sourceTree = "<group>"; };
+		049C284321CA601100CF6F5B /* ActorPlanSelectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorPlanSelectionController.swift; sourceTree = "<group>"; };
+		049C284521CA604500CF6F5B /* ActorViewPlanController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorViewPlanController.swift; sourceTree = "<group>"; };
+		049C284921CAA19B00CF6F5B /* PremiumAuditionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumAuditionViewController.swift; sourceTree = "<group>"; };
 		049D3075215D4FF000094288 /* DirectorShortListViewController+DelegateClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DirectorShortListViewController+DelegateClasses.swift"; sourceTree = "<group>"; };
+		049F7C2C21CBBBD10008D538 /* ShadowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowButton.swift; sourceTree = "<group>"; };
 		04ADF757215650F4005013E8 /* SNBlueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SNBlueButton.swift; sourceTree = "<group>"; };
 		04ADF75921565F14005013E8 /* PersonalisedViewController+CollectionviewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonalisedViewController+CollectionviewDelegate.swift"; sourceTree = "<group>"; };
 		04ADF75B2156A2BD005013E8 /* PersonalisedViewController+TableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PersonalisedViewController+TableViewDelegate.swift"; sourceTree = "<group>"; };
@@ -230,9 +250,17 @@
 		04B18CB0214E16FD00A8E6D8 /* PortfolioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioViewController.swift; sourceTree = "<group>"; };
 		04B18CB2214F71F100A8E6D8 /* PortfolioCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioCollectionViewCell.swift; sourceTree = "<group>"; };
 		04B18CB3214F71F100A8E6D8 /* PortfolioCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PortfolioCollectionViewCell.xib; sourceTree = "<group>"; };
+		04C032DE21C8D7BB00351ECA /* ViewPlansController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPlansController.swift; sourceTree = "<group>"; };
 		04C6738421AFFA06007D391B /* GeneralInfoServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralInfoServices.swift; sourceTree = "<group>"; };
 		04C6738D21B01D0D007D391B /* DirectorSubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectorSubscriptionViewController.swift; sourceTree = "<group>"; };
 		04C6738F21B02675007D391B /* SubscriptionTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionTypeViewController.swift; sourceTree = "<group>"; };
+		04CC4F5721CC111A000A695C /* ResourceResultListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceResultListViewController.swift; sourceTree = "<group>"; };
+		04CC4F5B21CC1199000A695C /* ResourceListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceListTableViewCell.swift; sourceTree = "<group>"; };
+		04CC4F5C21CC1199000A695C /* ResourceListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResourceListTableViewCell.xib; sourceTree = "<group>"; };
+		04D7508F21CC200D000AB0B5 /* ResourceListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceListCollectionViewCell.swift; sourceTree = "<group>"; };
+		04D7509021CC200D000AB0B5 /* ResourceListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResourceListCollectionViewCell.xib; sourceTree = "<group>"; };
+		04D7509421CCF3E8000AB0B5 /* ShadowCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowCardView.swift; sourceTree = "<group>"; };
+		04E7A4AE21CD6C3C0010DEB1 /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		04EBB99F213D95D4003E18B6 /* StarNXt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarNXt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04EBB9A2213D95D4003E18B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04EBB9A4213D95D4003E18B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -324,6 +352,7 @@
 				04C6738F21B02675007D391B /* SubscriptionTypeViewController.swift */,
 				04EE961D21C659C100A866DE /* DirectorPlanSelectionController.swift */,
 				04EE961F21C65B1600A866DE /* DirectorPlanTypeController.swift */,
+				04C032DE21C8D7BB00351ECA /* ViewPlansController.swift */,
 				045FA290215AA63C0041F17F /* Common */,
 				04896D182156CAE4000FCEAA /* Profile */,
 				04896D192156CAFE000FCEAA /* PersonalizedPostaudtion */,
@@ -438,6 +467,9 @@
 			children = (
 				04C13B0A2154D37E0053CCE9 /* CreateProfile */,
 				04C13B0B2154D3960053CCE9 /* Dashboard */,
+				049C284321CA601100CF6F5B /* ActorPlanSelectionController.swift */,
+				049C284521CA604500CF6F5B /* ActorViewPlanController.swift */,
+				049C284921CAA19B00CF6F5B /* PremiumAuditionViewController.swift */,
 			);
 			path = Actor;
 			sourceTree = "<group>";
@@ -484,10 +516,15 @@
 			children = (
 				04638453214A721200EB9B2A /* Audition */,
 				04932A992145389400ED9756 /* ActorDashboardViewController.swift */,
+				04CC4F5721CC111A000A695C /* ResourceResultListViewController.swift */,
+				04CC4F5B21CC1199000A695C /* ResourceListTableViewCell.swift */,
+				04CC4F5C21CC1199000A695C /* ResourceListTableViewCell.xib */,
 				04638454214A723800EB9B2A /* ResourceViewController.swift */,
 				04638456214ACFD700EB9B2A /* ResourceResultViewController.swift */,
 				04638458214ACFF200EB9B2A /* ResourceResultTableViewCell.swift */,
 				04638459214ACFF200EB9B2A /* ResourceResultTableViewCell.xib */,
+				04D7508F21CC200D000AB0B5 /* ResourceListCollectionViewCell.swift */,
+				04D7509021CC200D000AB0B5 /* ResourceListCollectionViewCell.xib */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -549,6 +586,10 @@
 				041CDA50215611A8003C2F35 /* BaseViewController.swift */,
 				042B92C52170A39600C9498D /* NetworkUtilities.swift */,
 				042B92C62170A39600C9498D /* Reachability.swift */,
+				049F7C2C21CBBBD10008D538 /* ShadowButton.swift */,
+				04D7509421CCF3E8000AB0B5 /* ShadowCardView.swift */,
+				04E7A4AE21CD6C3C0010DEB1 /* DetailTableViewController.swift */,
+				045BBD4B21CFF3470016528D /* SharedMethods.swift */,
 				04C13B0D2154D5E30053CCE9 /* OnboardingScreens */,
 				04C13B062154D3190053CCE9 /* SlideMenu */,
 				04C13B0C2154D5C60053CCE9 /* Menu */,
@@ -558,6 +599,7 @@
 				04EBBA17213DA3C9003E18B6 /* Extension */,
 				04EBB9F6213D98FE003E18B6 /* Fonts */,
 				04481C8E2140578C004AB940 /* SubscriptionViewController.swift */,
+				045BBD4921CFD0D40016528D /* state_city.json */,
 				04EBB9A6213D95D4003E18B6 /* Main.storyboard */,
 				04EBB9A9213D95D7003E18B6 /* Assets.xcassets */,
 				04EBB9AB213D95D7003E18B6 /* LaunchScreen.storyboard */,
@@ -727,6 +769,7 @@
 				04EBB9CF213D98BF003E18B6 /* Montserrat-Thin.ttf in Resources */,
 				04EBB9CE213D98BF003E18B6 /* Montserrat-ExtraLightItalic.ttf in Resources */,
 				04EBB9EF213D98ED003E18B6 /* Roboto-MediumItalic.ttf in Resources */,
+				04CC4F5E21CC1199000A695C /* ResourceListTableViewCell.xib in Resources */,
 				04EBB9D5213D98BF003E18B6 /* Montserrat-BoldItalic.ttf in Resources */,
 				04EBB9D0213D98BF003E18B6 /* Montserrat-BlackItalic.ttf in Resources */,
 				04F574042153B63A004283CE /* ProfileSelectionViewCell.xib in Resources */,
@@ -759,7 +802,9 @@
 				04896D0F2156B5E7000FCEAA /* MeasurementHeightTableViewCell.xib in Resources */,
 				04EBB9F0213D98ED003E18B6 /* Roboto-Bold.ttf in Resources */,
 				043A277C215AAB1100DB771F /* ApplcationDetailTableViewCell.xib in Resources */,
+				045BBD4A21CFD0D50016528D /* state_city.json in Resources */,
 				0409FBB521501D1400175F8C /* SideMenuTableViewCell.xib in Resources */,
+				04D7509221CC200D000AB0B5 /* ResourceListCollectionViewCell.xib in Resources */,
 				04EBB9E9213D98ED003E18B6 /* Roboto-BlackItalic.ttf in Resources */,
 				0422D1D621576DEF00C30CCD /* NoItemView.xib in Resources */,
 				04B18CB5214F71F100A8E6D8 /* PortfolioCollectionViewCell.xib in Resources */,
@@ -824,18 +869,24 @@
 			files = (
 				0422D1DD215782A400C30CCD /* DirectorAuditionListViewController.swift in Sources */,
 				04EBBA0D213DA3B3003E18B6 /* UIViewExtensions.swift in Sources */,
+				04D7509121CC200D000AB0B5 /* ResourceListCollectionViewCell.swift in Sources */,
 				04638460214AE0FF00EB9B2A /* HelpMenuTableViewCell.swift in Sources */,
+				04CC4F5821CC111A000A695C /* ResourceResultListViewController.swift in Sources */,
 				04481C9321407212004AB940 /* AccountMenuViewController.swift in Sources */,
 				043A6DB5215AA16700C0D6CA /* ApplicaitonDetailViewController.swift in Sources */,
 				04896D162156C03D000FCEAA /* PersonlisedAudtionCollectionViewCell.swift in Sources */,
 				0422D1E1215782C200C30CCD /* DirectorShortListViewController.swift in Sources */,
 				0409FBB421501D1400175F8C /* SideMenuTableViewCell.swift in Sources */,
 				0422D1DB2157829100C30CCD /* DirectorDashboardViewController.swift in Sources */,
+				04CC4F5D21CC1199000A695C /* ResourceListTableViewCell.swift in Sources */,
 				04EBBA11213DA3B3003E18B6 /* ArrayExtensions.swift in Sources */,
 				041CDA51215611A8003C2F35 /* BaseViewController.swift in Sources */,
 				041CDA4F21551231003C2F35 /* CreateDirectorProfileViewController+CollectionviewdDelegate.swift in Sources */,
+				045BBD4C21CFF3470016528D /* SharedMethods.swift in Sources */,
 				04EBBA0A213DA3B3003E18B6 /* PhotoAlbumExtensions.swift in Sources */,
+				049C284A21CAA19B00CF6F5B /* PremiumAuditionViewController.swift in Sources */,
 				049D3076215D4FF000094288 /* DirectorShortListViewController+DelegateClasses.swift in Sources */,
+				049C284621CA604500CF6F5B /* ActorViewPlanController.swift in Sources */,
 				04ADF7632156A441005013E8 /* MeasurementTableViewCell.swift in Sources */,
 				04481C8D21404C5C004AB940 /* GetStartedViewController.swift in Sources */,
 				0409FBAD215016DB00175F8C /* SlideMenuController.swift in Sources */,
@@ -853,7 +904,10 @@
 				04EBBA14213DA3B3003E18B6 /* UIAlertControllerExtensions.swift in Sources */,
 				04C6739021B02675007D391B /* SubscriptionTypeViewController.swift in Sources */,
 				0428D19E2157F95B003EB321 /* ApplicationTableViewCell.swift in Sources */,
+				04E7A4AF21CD6C3C0010DEB1 /* DetailTableViewController.swift in Sources */,
+				049C284421CA601100CF6F5B /* ActorPlanSelectionController.swift in Sources */,
 				04638457214ACFD700EB9B2A /* ResourceResultViewController.swift in Sources */,
+				04C032DF21C8D7BB00351ECA /* ViewPlansController.swift in Sources */,
 				0495F3682147931B008ACD67 /* AuditionDetailViewController.swift in Sources */,
 				04C6738521AFFA06007D391B /* GeneralInfoServices.swift in Sources */,
 				0409FBAF215016DB00175F8C /* SlideViewController.swift in Sources */,
@@ -872,6 +926,7 @@
 				045FA296215AA6C70041F17F /* ApplicaitonDetailViewController+DelegateClasses.swift in Sources */,
 				0495F3632146D73A008ACD67 /* AuditionTableViewCell.swift in Sources */,
 				041CDA4A2154F6B5003C2F35 /* ProfileInfoModel.swift in Sources */,
+				04D7509521CCF3E8000AB0B5 /* ShadowCardView.swift in Sources */,
 				04B18CB4214F71F100A8E6D8 /* PortfolioCollectionViewCell.swift in Sources */,
 				04638463214B8F0200EB9B2A /* PlanHistoryViewController.swift in Sources */,
 				04B18CB1214E16FD00A8E6D8 /* PortfolioViewController.swift in Sources */,
@@ -899,6 +954,7 @@
 				04638455214A723800EB9B2A /* ResourceViewController.swift in Sources */,
 				04EE961E21C659C100A866DE /* DirectorPlanSelectionController.swift in Sources */,
 				04EE962021C65B1600A866DE /* DirectorPlanTypeController.swift in Sources */,
+				049F7C2D21CBBBD20008D538 /* ShadowButton.swift in Sources */,
 				04EBBA10213DA3B3003E18B6 /* DateExtensions.swift in Sources */,
 				0495F3662146D7BC008ACD67 /* AuditionModel.swift in Sources */,
 				04EBBA0B213DA3B3003E18B6 /* UIImageViewExtensions.swift in Sources */,

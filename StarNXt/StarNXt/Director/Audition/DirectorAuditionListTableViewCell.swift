@@ -20,6 +20,12 @@ class DirectorAuditionListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var applicationReceivedLbl : UILabel!
     @IBOutlet weak var auditionStatusLbl : UILabel!
+    
+    @IBOutlet weak var auditionsReceivedButton : UIButton!
+    @IBOutlet weak var profileShortlistButton : UIButton!
+    
+    @IBOutlet weak var auditionOpenTypeDurationLabel : UILabel!
+    @IBOutlet weak var auditionOpenTypeDurationValueLabel : UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

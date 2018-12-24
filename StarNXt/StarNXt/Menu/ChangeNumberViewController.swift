@@ -10,6 +10,7 @@ import UIKit
 
 class ChangeNumberViewController: BaseViewController {
 
+    @IBOutlet weak var otpView : UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Change Number"
@@ -21,6 +22,17 @@ class ChangeNumberViewController: BaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func onDoneAction() -> Void{
+        self.otpView.isHidden = false
+    }
+    
+    @IBAction func onVerifyAction() -> Void{
+        //TODO: After verify need to uddate
+    }
+    
+    @IBAction func onResendAction() -> Void{
+        self.otpView.isHidden = true
+    }
 
     /*
     // MARK: - Navigation

@@ -13,9 +13,6 @@ class AuditionDetailViewController: UIViewController {
 
     @IBOutlet weak var listTableView : UITableView!
     @IBOutlet weak var applyBtn : UIButton!
-    @IBOutlet weak var moreBtn : UIButton!
-    @IBOutlet weak var tableviewBottomConstraint : NSLayoutConstraint!
-    @IBOutlet weak var tableviewTopConstraint : NSLayoutConstraint!
     
     @IBOutlet weak var closeAuditionGroupView : UIView!
     
@@ -64,19 +61,23 @@ class AuditionDetailViewController: UIViewController {
     
     func updateUI() -> Void {
         self.closeAuditionGroupView.isHidden = true
-        if userRole == UserRole.Director{
-            applyBtn.isHidden = true
-            moreBtn.isHidden = false
-            tableviewBottomConstraint.constant = 0
-            tableviewTopConstraint.constant = 50
+        if UserDefaults.standard.getUserRole() == Constants.kDIRECTOR{
+            applyBtn.isHidden = false
+            
+            if audtionStatus == Audition_Status.Active && auditionType == AuditionType.Personalised{
+                applyBtn.setTitle("Close Audition", for: .normal)
+                applyBtn.backgroundColor = UIColor.init(hex: 0xffffff)
+                applyBtn.setTitleColor(UIColor.init(hex: 0xff1265), for: .normal)
+                applyBtn.titleLabel?.font = AppFont.getMedium(size: 16)
+                applyBtn.isHidden = false
+            }else{
+                applyBtn.isHidden = true
+            }
+            
         }else{
-            moreBtn.isHidden = true
-            tableviewTopConstraint.constant = 0
             if auditionType == AuditionType.Open{
                 applyBtn.isHidden = true
-                tableviewBottomConstraint.constant = 0
             }else {
-                tableviewBottomConstraint.constant = 84
                 applyBtn.isHidden = false
                 if audtionStatus == Audition_Status.Active{
                     applyBtn.setTitle("Apply", for: .normal)
@@ -89,32 +90,6 @@ class AuditionDetailViewController: UIViewController {
                     applyBtn.backgroundColor = UIColor.init(hex: 0x808080)
                 }
             }
-        }
-    }
-    
-    @IBAction func moreBtnAction() -> Void{
-        let actionSheet = UIAlertController.init(title: "", message: "Edit audition", preferredStyle: .actionSheet)
-        
-        let editAction = UIAlertAction.init(title: "Edit", style: .default) { (action) in
-            self.onEdit()
-        
-        }
-        
-        let deleteAction = UIAlertAction.init(title: "Close", style: .destructive) { (action) in
-            self.closeAuditionGroupView.isHidden = false
-        }
-        
-        let cancelAction = UIAlertAction.init(title: "Cancel", style: .cancel) { (action) in
-            self.dismiss(animated: true, completion: nil)
-        }
-        
-        actionSheet.addAction(editAction)
-        actionSheet.addAction(deleteAction)
-        actionSheet.addAction(cancelAction)
-        if DeviceType.IS_IPAD {
-            
-        }else{
-            self.present(actionSheet, animated: true, completion: nil)
         }
     }
     

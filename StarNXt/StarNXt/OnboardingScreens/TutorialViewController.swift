@@ -13,7 +13,7 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var scrollView : UIScrollView!
     @IBOutlet weak var sliderPageControl : UIPageControl!
     
-    var userRole : String = UserRole.Actor
+    var userRole : String = ""
     
     var slideImages = [String]()
     var titleArray = [String]()

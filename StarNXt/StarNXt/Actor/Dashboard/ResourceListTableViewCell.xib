@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Medium.ttf">
+            <string>Montserrat-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ResourceListTableViewCell" rowHeight="229" id="KGk-i7-Jjw" customClass="ResourceListTableViewCell" customModule="StarNXt" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="368" height="229"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="368" height="228.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nnr-vn-pHK" customClass="ShadowCardView" customModule="StarNXt" customModuleProvider="target">
+                        <rect key="frame" x="8" y="8" width="352" height="212.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummyprofile" translatesAutoresizingMaskIntoConstraints="NO" id="TBr-2F-fZx">
+                                <rect key="frame" x="0.0" y="0.0" width="352" height="212.5"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgtransparentlayer" translatesAutoresizingMaskIntoConstraints="NO" id="xEq-zR-i0y">
+                                <rect key="frame" x="0.0" y="107.5" width="352" height="105"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="105" id="nXY-WK-wHj"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Koothu-p-pattarai" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ope-SR-uYQ">
+                                <rect key="frame" x="16" y="174.5" width="320" height="22"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TBr-2F-fZx" firstAttribute="leading" secondItem="nnr-vn-pHK" secondAttribute="leading" id="1Jm-P2-ICj"/>
+                            <constraint firstAttribute="trailing" secondItem="Ope-SR-uYQ" secondAttribute="trailing" constant="16" id="2iQ-4M-brR"/>
+                            <constraint firstItem="xEq-zR-i0y" firstAttribute="trailing" secondItem="TBr-2F-fZx" secondAttribute="trailing" id="3eX-5z-wDq"/>
+                            <constraint firstItem="xEq-zR-i0y" firstAttribute="leading" secondItem="TBr-2F-fZx" secondAttribute="leading" id="7PC-Ks-ryH"/>
+                            <constraint firstItem="xEq-zR-i0y" firstAttribute="bottom" secondItem="TBr-2F-fZx" secondAttribute="bottom" id="F31-l2-ZEK"/>
+                            <constraint firstAttribute="trailing" secondItem="TBr-2F-fZx" secondAttribute="trailing" id="Fy6-sm-qmh"/>
+                            <constraint firstAttribute="bottom" secondItem="TBr-2F-fZx" secondAttribute="bottom" id="Su7-SC-Yvp"/>
+                            <constraint firstItem="TBr-2F-fZx" firstAttribute="top" secondItem="nnr-vn-pHK" secondAttribute="top" id="hMz-bm-dTB"/>
+                            <constraint firstItem="Ope-SR-uYQ" firstAttribute="leading" secondItem="nnr-vn-pHK" secondAttribute="leading" constant="16" id="wad-da-4tW"/>
+                            <constraint firstAttribute="bottom" secondItem="Ope-SR-uYQ" secondAttribute="bottom" constant="16" id="yZb-DO-NOT"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.95294117649999999" green="0.96862745100000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="nnr-vn-pHK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Fnc-RS-dzV"/>
+                    <constraint firstAttribute="bottom" secondItem="nnr-vn-pHK" secondAttribute="bottom" constant="8" id="Oz9-5I-fwg"/>
+                    <constraint firstAttribute="trailing" secondItem="nnr-vn-pHK" secondAttribute="trailing" constant="8" id="igT-WA-8qX"/>
+                    <constraint firstItem="nnr-vn-pHK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="psn-XB-sny"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="83.200000000000003" y="103.89805097451276"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="bgtransparentlayer" width="344" height="105"/>
+        <image name="dummyprofile" width="344" height="222"/>
+    </resources>
+</document>

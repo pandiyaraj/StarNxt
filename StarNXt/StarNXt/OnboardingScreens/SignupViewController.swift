@@ -11,7 +11,7 @@ import UIKit
 class SignupViewController: UIViewController {
 
     @IBOutlet weak var mobileNumberView : UIView!
-    @IBOutlet weak var mobileNumberTF : UITextField!
+    @IBOutlet weak var mobileNumberTF : SNTextField!
     
     @IBOutlet weak var OTPView : UIView!
     @IBOutlet weak var otpTF : SNTextField!
@@ -22,7 +22,8 @@ class SignupViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.mobileNumberTF.text = "9092337961"
-        mobileNumberView.addBorder(edges: .bottom, colour: UIColor.init(hex: 0x757575), thickness: 1)
+        self.mobileNumberTF.delegate = self
+        self.otpTF.delegate  = self
         // Do any additional setup after loading the view.
     }
 
@@ -57,10 +58,12 @@ class SignupViewController: UIViewController {
     @IBAction func onVerifyAction() -> Void{
         
         if userRole == Constants.kDIRECTOR{
-        //TODO Verify
-        let directorProfileVc = self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.createDirectorProfilevc) as! CreateDirectorProfileViewController
-        self.navigationController?.pushViewController(directorProfileVc, animated: true)
+            //TODO Verify
+            UserDefaults.standard.setUserRole(value: Constants.kDIRECTOR, key: Defaults.userRole)
+            let directorProfileVc = self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.createDirectorProfilevc) as! CreateDirectorProfileViewController
+            self.navigationController?.pushViewController(directorProfileVc, animated: true)
         }else{
+            UserDefaults.standard.setUserRole(value: Constants.kACTOR, key: Defaults.userRole)
             let actorProfileVc = self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.createprofilevc) as! CreateProfileViewController
             self.navigationController?.pushViewController(actorProfileVc, animated: true)
         }
@@ -81,5 +84,23 @@ class SignupViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 
+}
+
+extension SignupViewController : UITextFieldDelegate{
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if let tf = textField as? SNTextField{
+            tf.setBorderColor(selected: true)
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if let tf = textField as? SNTextField{
+            tf.setBorderColor(selected: false)
+        }
+    }
 }

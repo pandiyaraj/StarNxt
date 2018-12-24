@@ -23,6 +23,7 @@ class SlideViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     @IBOutlet weak var appVersionLbl: UILabel!
     @IBOutlet weak var viewAccountBtn: UIButton!
     
+    var editDirectorProfileVc: UIViewController!
     var editProfileVc: UIViewController!
     var planHistoryVc: UIViewController!
     var accountVc: UIViewController!
@@ -52,42 +53,63 @@ class SlideViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
+        //Actor Dashboard
+        let actorDashboard = self.storyboard?.instantiateViewController(withIdentifier:StoryboardIdentifier.actordashboardVc) as!
+        ActorDashboardViewController
+        let nvcActorDashboard = UINavigationController(rootViewController: actorDashboard)
+        nvcActorDashboard.navigationBar.barTintColor = UIColor.white
+        nvcActorDashboard.navigationBar.tintColor = UIColor.white
+        self.actorDashboardVc = nvcActorDashboard
         
-        if UserDefaults.standard.getUserRole() == Constants.kACTOR{
-            let actorDashboard = self.storyboard?.instantiateViewController(withIdentifier:StoryboardIdentifier.actordashboardVc) as!
-            ActorDashboardViewController
-            self.actorDashboardVc = UINavigationController(rootViewController: actorDashboard)
-        }else {
-            let directorDashboard = self.storyboard?.instantiateViewController(withIdentifier:StoryboardIdentifier.directordashboardvc) as!
-            DirectorDashboardViewController
-            
-            self.directorDashboardVc = UINavigationController(rootViewController: directorDashboard)
-        }
-        
-        
-        let createProfileVc = self.storyboard?.instantiateViewController(withIdentifier:StoryboardIdentifier.createprofilevc) as!
-        CreateProfileViewController
+        //Create actor profile
+        let createProfileVc = self.storyboard?.instantiateViewController(withIdentifier:StoryboardIdentifier.createprofilevc) as! CreateProfileViewController
+        createProfileVc.isFromMenu = true
         let nvcEditProfile = UINavigationController(rootViewController: createProfileVc)
         nvcEditProfile.navigationBar.barTintColor = UIColor.white
+        nvcEditProfile.navigationBar.tintColor = UIColor.white
         self.editProfileVc = nvcEditProfile
         
+        //Director Dashboard
+        let directorDashboard = self.storyboard?.instantiateViewController(withIdentifier:StoryboardIdentifier.directordashboardvc) as!
+        DirectorDashboardViewController
+        let nvcDirectorDashboardVc = UINavigationController(rootViewController: directorDashboard)
+        nvcDirectorDashboardVc.navigationBar.barTintColor = UIColor.white
+        nvcDirectorDashboardVc.navigationBar.tintColor = UIColor.white
+        self.directorDashboardVc = nvcDirectorDashboardVc
+        
+        //Director Create Profile
+        let createDirectorProfileVc = self.storyboard?.instantiateViewController(withIdentifier:StoryboardIdentifier.createDirectorProfilevc) as!
+        CreateDirectorProfileViewController
+        createDirectorProfileVc.isFromSideMenu = true
+        let nvcDirectorEditProfile = UINavigationController(rootViewController: createDirectorProfileVc)
+        nvcDirectorEditProfile.navigationBar.barTintColor = UIColor.white
+        nvcDirectorEditProfile.navigationBar.tintColor = UIColor.white
+        self.editDirectorProfileVc = nvcDirectorEditProfile
+        
+        
+        //Plan History
         let historyvc = storyboard.instantiateViewController(withIdentifier:StoryboardIdentifier.planhistoryvc) as!
         PlanHistoryViewController
         let nvcPlan = UINavigationController(rootViewController: historyvc)
         nvcPlan.navigationBar.barTintColor = UIColor.white
-        
+        nvcPlan.navigationBar.tintColor = UIColor.white
         self.planHistoryVc = nvcPlan
         
         
+        //Account
         let account = self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.accountmenuvc) as! AccountMenuViewController
         let nvcAccount = UINavigationController(rootViewController: account)
         nvcAccount.navigationBar.barTintColor = UIColor.white
+        nvcAccount.navigationBar.tintColor = UIColor.white
         self.accountVc = nvcAccount
         
+       
+        //HELP
         let helpvc = self.storyboard?.instantiateViewController(withIdentifier:StoryboardIdentifier.helpmenuvc) as!
         HelpViewController
         let nvcHelp = UINavigationController(rootViewController: helpvc)
         nvcHelp.navigationBar.barTintColor = UIColor.white
+        nvcHelp.navigationBar.tintColor = UIColor.white
         self.helpVc = nvcHelp
 
         
@@ -128,6 +150,10 @@ class SlideViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         
     }
     
+    @IBAction func onSwitchAction(sender : UIButton) {
+        sender.isSelected = !sender.isSelected
+    }
+    
     //MARK:- TableView Delegate
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -155,32 +181,44 @@ class SlideViewController: UIViewController,UITableViewDelegate,UITableViewDataS
             cell.textLabel?.textColor = UIColor.init(hex: 0xff7142)
             cell.selectionStyle = .none
         }
+        
+        if cell.titleLabl.text?.containsIgnoringCase("Notifications") == true{
+            cell.notificationSwitch.isHidden = false
+            cell.notificationSwitch.addTarget(self, action: #selector(onSwitchAction(sender:)), for: .touchUpInside)
+        }else{
+            cell.notificationSwitch.isHidden = true
+
+        }
         return cell
     }
     
     func  tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.SelectedGeneralMenuIndex = indexPath
-        self.slideMenuController()?.closeLeft()
         let selectedRow = self.generalMenu[indexPath.row]
+        let cell = tableView.cellForRow(at: indexPath) as! SideMenuTableViewCell
+        if selectedRow != "Notifications"{
+            self.slideMenuController()?.closeLeft()
+        }
         switch selectedRow {
         case "Home":
             if UserDefaults.standard.getUserRole() == Constants.kACTOR{
-                DispatchQueue.main.async {self.slideMenuController()?.changeMainViewController(self.actorDashboardVc, close: true)
+                DispatchQueue.main.async
+                    {self.slideMenuController()?.changeMainViewController(self.actorDashboardVc, close: true)
                 }
             }else{
-                DispatchQueue.main.async {self.slideMenuController()?.changeMainViewController(self.directorDashboardVc, close: true)
+                DispatchQueue.main.async {
+                    self.slideMenuController()?.changeMainViewController(self.directorDashboardVc, close: true)
                 }
             }
             break;
         case "Edit Profile":
-            
             if UserDefaults.standard.getUserRole() == Constants.kACTOR{
                 DispatchQueue.main.async {
                     self.slideMenuController()?.changeMainViewController(self.editProfileVc, close: true)
                 }
             }else{
                 DispatchQueue.main.async {
-                    self.slideMenuController()?.changeMainViewController(self.editProfileVc, close: true)
+                    self.slideMenuController()?.changeMainViewController(self.editDirectorProfileVc, close: true)
                 }
             }
             
@@ -197,12 +235,12 @@ class SlideViewController: UIViewController,UITableViewDelegate,UITableViewDataS
             break;
         case "Notifications":
             print("Nothing")
+//            self.onSwitchAction(sender: cell.notificationSwitch)
             break;
         case "Help":
             DispatchQueue.main.async {
                 self.slideMenuController()?.changeMainViewController(self.helpVc, close: true)
             }
-           // logout
         default:
             break
         }

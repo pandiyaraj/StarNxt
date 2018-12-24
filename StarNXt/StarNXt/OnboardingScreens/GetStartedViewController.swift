@@ -46,30 +46,25 @@ class GetStartedViewController: UIViewController {
     }
     
     @IBAction func onViewplanAction() -> Void{
-        if UserDefaults.standard.getUserRole() == Constants.kDIRECTOR{
-        
-        }else{
+        if UserDefaults.standard.getUserRole() == Constants.kACTOR{
+            let actorPlanVc = self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.actorPlanView) as! ActorViewPlanController
+            self.navigationController?.pushViewController(actorPlanVc, animated: true)
             
+        }else{
+            let directorPlanVc = self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.viewplanvc) as! ViewPlansController
+            self.navigationController?.pushViewController(directorPlanVc, animated: true)
         }
     }
     
     @IBAction func onGetStartAction() -> Void{
-        
-        let directorPlanVc = self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.directorPlanSelectionVc) as! DirectorPlanSelectionController
-        self.navigationController?.pushViewController(directorPlanVc, animated: true)
-        
-//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//        if UserDefaults.standard.getUserRole() == Constants.kDIRECTOR{
-//            appDelegate.directorDashboardApplication()
-        
-        /*let subscriptionVc =  self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.directorSubscriptionVc) as! DirectorSubscriptionViewController
-            self.navigationController?.pushViewController(subscriptionVc, animated: true)*/
-            
-//        }else{
-//            appDelegate.actorDashboardApplication()
-//            /* let subscriptionVc =  self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.subscriptionvc) as! SubscriptionViewController
-//            self.navigationController?.pushViewController(subscriptionVc, animated: true)*/
-//        }
+        if UserDefaults.standard.getUserRole() == Constants.kACTOR{
+            let actorPlanVc = self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.actorPlanSelectionVc) as! ActorPlanSelectionController
+            self.navigationController?.pushViewController(actorPlanVc, animated: true)
+
+        }else{
+            let directorPlanVc = self.storyboard?.instantiateViewController(withIdentifier: StoryboardIdentifier.directorPlanSelectionVc) as! DirectorPlanSelectionController
+            self.navigationController?.pushViewController(directorPlanVc, animated: true)
+        }
     }
 
     override func didReceiveMemoryWarning() {

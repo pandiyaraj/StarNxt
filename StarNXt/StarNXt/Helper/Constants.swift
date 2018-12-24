@@ -52,8 +52,8 @@ struct NotificationConstants{
 }
 
 struct Constants {
-    static let kDIRECTOR = UserRole.Director
-    static let kACTOR = UserRole.Actor
+    static let kDIRECTOR = "director"
+    static let kACTOR = "actor"
 }
 
 enum SubscriptionPlan : Int {
@@ -83,21 +83,7 @@ struct HttpMethod{
     static let DELETE : String = "DELETE"
     static let PUT : String = "PUT"
     static let PATCH:String = "PATCH"
-    
 }
-
-struct EventType {
-    static let Ongoing_Type = "ongoing"
-    static let Upcoming_Type = "upcoming"
-    static let Completed_Type = "completed"
-}
-
-struct GetOverlayType {
-    static let IsForNearMe = "IsForNearMe"
-    static let IsForAway = "IsForAway"
-    static let IsForPopular = "IsForPopular"
-}
-
 struct Time {
     static let Min: Double = 60
     static let Hour: Double = 60 * Time.Min
@@ -129,6 +115,9 @@ struct CommonValues {
 struct Themecolor {
     static let grey = UIColor.init(hex: 0x929292)
     static let orange = UIColor.init(hex: 0xff9b00)
+    
+    static let placeholdercolor = UIColor.init(hex: 0x757575)
+    static let placeholderSelectedColor = UIColor.black
 }
 
 struct UserDefaultConstants
@@ -155,6 +144,7 @@ struct StoryboardIdentifier {
     
     static let auditionvc = "auditionvc"
     static let auditiondetailvc = "auditiondetailvc"
+    static let premiumauditiondetailvc = "premiumauditiondetailvc"
     
     static let resourcevc = "resourcevc"
     static let resourceresultvc = "resourceresultvc"
@@ -192,8 +182,13 @@ struct StoryboardIdentifier {
     
     static let directorPlanSelectionVc = "directorplanselectionvc"
     static let directorPlanTypeVc = "directorplantype"
+    static let viewplanvc = "viewplanvc"
     
+    static let actorPlanSelectionVc = "actorplanselectionvc"
+    static let actorPlanView = "actorviewplanvc"
+    static let resourcelistvc = "resourcelistvc"
     
+    static let detailVc = "detailVc"
 }
 
 struct Audition_Status
@@ -233,6 +228,8 @@ struct CellIdentifier {
     static let directorGroupApplicationCell = "ApplicationGroupCell"
     
      static let directionApplicationDetailTableCell = "ApplcationDetailTableViewCell"
+    
+    static let resourceListCell = "ResourceListTableViewCell"
     
 }
 
